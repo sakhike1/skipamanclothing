@@ -64,7 +64,7 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    color: white;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
