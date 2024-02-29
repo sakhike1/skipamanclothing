@@ -4,11 +4,11 @@
         <PopUp />
         <InfiniteSlider />
 
-        <section class="overflow-hidden     md:p-8 ">
-            <div class="flex flex-col w-[80%] md:flex-row mx-auto">
+        <section class="overflow-hidden    md:p-8 ">
+            <div class="flex flex-col w-[85%] md:flex-row mx-auto">
                 <div :style="{ background: color }"
-                    class="p-4 sm:p-8 lg:p-16 sm:w-56 md:w-32 lg:w-48 flex-grow order-last md:order-first">
-                    <div class="text-center pt-7 sm:text-left rtl:sm:text-right">
+                    class="p-4 sm:p-8 lg:p-16 sm:w-56 md:w-56 lg:w-48 flex-grow order-last md:order-first">
+                    <div class="text-center md:w pt-7 sm:text-left rtl:sm:text-right">
                         <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-black">
                             Latest skipas
                         </h2>
@@ -16,9 +16,9 @@
                             High-quality t-shirts made from durable fabrics will ensure that your favorite tees remain
                             comfortable and stylish for a long time, providing excellent value for your money.
                         </p>
-                        <div class="mt-4 sm:mt-8">
+                        <div class="mt-4  sm:mt-8">
                             <router-link to="/LatestArrival" @click="randomColor"
-                                class="inline-block rounded-full bg-green border hover:bg-opacity-0  hover:bg-gray-50 border-gray-900 text-white   px-4 sm:px-12 py-3 text-sm font-medium hover:text-black bg-black transition  ">
+                                class="inline-block md:w-56 rounded-full bg-green border hover:bg-opacity-0  hover:bg-gray-50 border-gray-900 text-white   px-4 sm:px-12 py-3 text-sm font-medium hover:text-black bg-black transition  ">
                                 Get your cool now!
                             </router-link>
                         </div>
