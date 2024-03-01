@@ -4,7 +4,7 @@
             <p>{{ salesText }}</p>
 
             <button @click="redirectToSalesPage"
-                class="shopnow inline-flex items-center justify-center h-10 px-8 m-5 font-medium tracking-wide text-white transition duration-200 bg-gradient-to-r from-indigo-300 to-purple-400 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
+                class="shopnow inline-flex sm:h-8 sm:text-xs items-center justify-center h-10 px-8 m-5 font-medium tracking-wide text-white transition duration-200 bg-gradient-to-r from-indigo-300 to-purple-400 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
                 {{ buttonText }}
             </button>
         </div>
@@ -110,7 +110,9 @@ p {
     .banner-navigation {
         padding-left: 20px;
         padding-right: 20px;
-        font-size: 20px;
+        font-size: 12px;
+        display: flex;
+
     }
 }
 </style>

@@ -7,8 +7,8 @@
         <section class="overflow-hidden    md:p-8 ">
             <div class="flex flex-col w-[85%] md:flex-row mx-auto">
                 <div :style="{ background: color }"
-                    class="p-4 sm:p-8 lg:p-16 sm:w-56 md:w-56 lg:w-48 flex-grow order-last md:order-first">
-                    <div class="text-center md:w pt-7 sm:text-left rtl:sm:text-right">
+                    class="p-4 sm:p-8 lg:p-16  md:w-56 lg:w-48 flex-grow order-last md:order-first">
+                    <div id="skipaman" class="text-center md:w pt-7 sm:text-left rtl:sm:text-right">
                         <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-black">
                             Latest skipas
                         </h2>
@@ -124,4 +124,37 @@ export default {
         /* Apply some styles */
     }
 }
-</style>
+
+.inline-block:hover {
+    opacity: 1;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+.mx-auto {
+    background: linear-gradient(90deg,
+            rgba(254, 250, 252, 1) 0%,
+            rgba(242, 248, 255, 1) 100%);
+}
+
+@media screen and (min-width: 640px) {
+    #skipaman {
+        text-align: center;
+        background-color: rgb(255, 0, 43);
+    }
+}
