@@ -118,4 +118,10 @@ export default {
 .mx-auto {
     background: linear-gradient(90deg, rgba(254, 250, 252, 1) 0%, rgba(242, 248, 255, 1) 100%);
 }
+
+@media screen and (min-width: 640px) {
+    .text-center {
+        /* Apply some styles */
+    }
+}
 </style>

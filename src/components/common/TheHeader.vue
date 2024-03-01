@@ -49,11 +49,11 @@
         <div v-show="isMenuOpen"
             class="md:hidden h-[220px] z-40 w-full rounded-b ed-md absolute top-[63px] p-4 left-0 right-0 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
             <hr class="w-full h-[1px] mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700">
-            <router-link to="/" class="block text-xs py-2 px-4 text-gray-700">Latest arrival</router-link>
+            <router-link to="LatestArrivals" class="block text-xs py-2 px-4 text-gray-700">Latest arrival</router-link>
             <router-link to="/about" class="block py-2 text-xs px-4 text-gray-700">Create your own Skipa</router-link>
             <router-link to="/" class="block text-xs py-2 px-4 text-gray-700">kids Apparel</router-link>
-            <router-link to="/UserLogin" class="block py-2 text-xs px-4 text-gray-700">Login</router-link>
-            <router-link to="UserSignup" class="block text-xs py-2 px-4 text-gray-700">Signup</router-link>
+            <router-link to="/ClientLogin" class="block py-2 text-xs px-4 text-gray-700">Login</router-link>
+            <router-link to="CreateAccount" class="block text-xs py-2 px-4 text-gray-700">Signup</router-link>
 
             <!-- Add more responsive navigation links as needed -->
             <button @click="closeMenu" @mouseover="rotateElement" @mouseleave="resetRotation"
