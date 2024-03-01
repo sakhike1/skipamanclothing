@@ -7,10 +7,10 @@
                         class="h-8 ms-2" alt="" /></router-link>
                 <router-link to="/LatestArrivals" class="hidden md:block text-gray-500 px-4">Lates Arrival
                 </router-link>
-                <router-link to="/LatestArrivals" class="hidden md:block text-gray-500 px-4">all T-shirt</router-link>
+                <router-link to="/AllTshirt" class="hidden md:block text-gray-500 px-4">all T-shirt</router-link>
                 <router-link to="/CreateTshirt" class="hidden md:block text-gray-500 px-4">Create your own Skipa
                 </router-link>
-                <router-link to="/ecommerce" class="hidden md:block text-gray-500 px-4">Latest Arrival</router-link>
+
             </div>
 
             <!-- Navigation Links -->
@@ -40,7 +40,8 @@
             <button @click="toggleMenu" class="md:hidden text-black">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
                 </svg>
             </button>
         </div>
@@ -51,7 +52,7 @@
             <hr class="w-full h-[1px] mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700">
             <router-link to="LatestArrivals" class="block text-xs py-2 px-4 text-gray-700">Latest arrival</router-link>
             <router-link to="/about" class="block py-2 text-xs px-4 text-gray-700">Create your own Skipa</router-link>
-            <router-link to="/" class="block text-xs py-2 px-4 text-gray-700">kids Apparel</router-link>
+            <router-link to="AllTshirt" class="block text-xs py-2 px-4 text-gray-700">all T-shirt</router-link>
             <router-link to="/ClientLogin" class="block py-2 text-xs px-4 text-gray-700">Login</router-link>
             <router-link to="CreateAccount" class="block text-xs py-2 px-4 text-gray-700">Signup</router-link>
 
@@ -65,7 +66,7 @@
         </div>
     </nav>
 </template>
-  
+
 <script>
 export default {
     components: {
@@ -105,7 +106,7 @@ export default {
 
 };
 </script>
-  
+
 <style scoped>
 @media screen and (max-width: 432px) {
     .bg-gray-200 {
@@ -131,4 +132,3 @@ nav {
     /* Adjust the value as needed */
 }
 </style>
-  

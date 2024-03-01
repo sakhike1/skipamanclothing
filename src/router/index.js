@@ -6,6 +6,7 @@ import Cart from '../components/Cart';
 import ClientLogin  from "../components/common/ClientLogin.vue"
 import LatestArrival from "../components/common/LatestArrival.vue";
 import CreateAccount from "../views/CreateAccount.vue"
+import AllTshirt from '../components/common/AllTshirt.vue';
 
 
 Vue.use(VueRouter);
@@ -21,6 +22,7 @@ const routes = [
   { path: '/LatestArrivals', component: LatestArrival },
   {path: '/ClientLogin', component: ClientLogin},
   {path: '/CreateAccount', component: CreateAccount},
+  {path: '/AllTshirt', component: AllTshirt},
 ];
 
 const router = new VueRouter({
