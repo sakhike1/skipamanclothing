@@ -2,7 +2,7 @@
     <!-- component -->
     <div class="flex h-screen w-full items-center justify-center ">
 
-        <div
+        <div data-aos="fade-up" data-aos-duration="3000"
             class="flex flex-col w-[100rem] max-w-md px-4 py-8 bg-gradient-to-r from-rose-50 to-teal-50 rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
             <div class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
                 Create account
@@ -85,17 +85,21 @@
         <video-two />
     </div>
 </template>
-  
+
 <script>
 import VideoTwo from '@/components/VideoTwo.vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 export default {
     components: {
         VideoTwo
     },
 };
 </script>
-  
-<style  scoped>
+
+<style scoped>
 .video-bg {
     position: fixed;
     padding: 5px;
@@ -174,4 +178,3 @@ export default {
     }
 }
 </style>
-  

@@ -43,7 +43,8 @@
 
 
             </div>
-            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)"
+            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
+                data-aos-duration="3000"
                 class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md  rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <div></div>
                 <a href="#">
@@ -84,16 +85,19 @@
 
             </div>
 
-            <div v-for="items in dishesNearYou" :key="items.id" v-on:click="foodDetails(items)"
+            <div v-for="items in dishesNearYou" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
+                data-aos-duration="3000"
                 class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <a href="#">
                     <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96   rounded-t-xl" />
                     <hr class="w-full h-[0.4px]  bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
                     <div class="px-4 py-3 w-72">
                         <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
-                        <p class="text-lg font-bold text-gray-400 truncate block capitalize">100% Cotton Graphic t-shirt</p>
+                        <p class="text-lg font-bold text-gray-400 truncate block capitalize">100% Cotton Graphic t-shirt
+                        </p>
                         <p class="text-xs font-bold text-gray-500  ">Add flair and vibrancy to your
-                            your look with a graphic tee you bound to stand out like you outside get some skipaman and apply
+                            your look with a graphic tee you bound to stand out like you outside get some skipaman and
+                            apply
                             dopeness to your mess </p>
                         <div class="flex items-center">
                             <del>
@@ -124,7 +128,8 @@
 
             </div>
 
-            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)"
+            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
+                data-aos-duration="3000"
                 class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <a href="#">
                     <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96   rounded-t-xl" />
@@ -133,7 +138,8 @@
                         <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
                         <p class="text-lg font-bold text-gray-400 ">100% cotton Heavy T-shirts
                         </p>
-                        <p class="text-xs font-bold text-gray-500 ">Ideal for cooler temperatures, these t-shirts are more
+                        <p class="text-xs font-bold text-gray-500 ">Ideal for cooler temperatures, these t-shirts are
+                            more
                             durable and made with thicker fabrics to keep wearers warm.
                         </p>
                         <div class="flex items-center">
@@ -170,10 +176,14 @@
         </section>
     </div>
 </template>
-  
+
 <script>
 
 import StarRating from "@/components/common/StarRating.vue";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 export default {
     components: {
@@ -203,8 +213,8 @@ export default {
 }
 
 </script>
-  
-<style >
+
+<style>
 .responsive-three-column-grid {
     display: block;
 }

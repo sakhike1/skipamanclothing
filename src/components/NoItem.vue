@@ -6,7 +6,8 @@
         <!-- Add a source tag for the video file -->
         <source :src="videoSrc" type="video/mp4">
       </video>
-      <div class="mx-4 sm:px-10 lg:px-20 xl:px-40"> <!-- Adjust padding for different screen sizes -->
+      <div data-aos="fade-up" data-aos-duration="3000" class="mx-4 sm:px-10 lg:px-20 xl:px-40">
+        <!-- Adjust padding for different screen sizes -->
         <div class="z-10 max-w-3xl p-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 md:p-16 opacity-80">
           <div class="text-center">
             <h2 class="mb-6 text-3xl font-medium leading-10 tracking-tight text-gray-50 md:text-3xl">
@@ -34,7 +35,10 @@
 
 <script>
 import VideoThree from '@/components/VideoThree.vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init();
 export default {
   components: {
     VideoThree

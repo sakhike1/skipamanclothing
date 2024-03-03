@@ -16,26 +16,21 @@
             <!-- Navigation Links -->
 
             <!-- Search Bar -->
-            <div class="hidden md:flex items-center">
-                <div class="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-8 xl:space-x-10">
-                    <router-link to="/ClientLogin" title=""
-                        class="text-base font-medium text-white p-3 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50">
-                        <img class="w-6 h-6 object-cover" :src="require('@/assets/user4.png')"
-                            alt="My Image" /></router-link>
-                    <router-link to="CreateAccount" title=""
-                        class="text-base font-medium text-white p-3 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50">
-                        <img class="w-6 h-6 object-cover" :src="require('@/assets/ad.png')" alt="My Image" />
+            <div class="hidden md:flex items-center p-2">
+                <div class="md:flex lg:ml-auto lg:flex lg:items-center lg:space-x-8 xl:space-x-10">
+                    <router-link to="/ClientLogin" title="" class="link-style">
+                        <img class="icon-style" :src="require('@/assets/user4.png')" alt="My Image" />
                     </router-link>
+                    <router-link to="CreateAccount" title="" class="link-style">
+                        <img class="icon-style" :src="require('@/assets/ad.png')" alt="My Image" />
+                    </router-link>
+                    <router-link to="/cart" title="" class="link-style">
+                        <img class="icon-style" :src="require('@/assets/shopping2.png')" alt="Cart" />
 
-                    <router-link to="/cart" title=""
-                        class="px-5 py-2 flex text-base font-bold leading-7 text-gray-400 transition-all duration-200"
-                        role="button">
-                        <img class="w-6 h-6 mr-2 text-black" :src="require('@/assets/shopping2.png')" alt="Cart" />
-                        {{ count }}
                     </router-link>
+                    {{ count }}
                 </div>
             </div>
-
             <!-- Mobile Menu Toggle Button -->
             <button @click="toggleMenu" class="md:hidden text-black">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -130,5 +125,30 @@ nav {
     background: linear-gradient(90deg, rgba(254, 250, 252, 1) 0%, rgba(242, 248, 255, 1) 100%);
     border: 1px solid rgb(220, 215, 215);
     /* Adjust the value as needed */
+}
+
+.link-style {
+    text-decoration: none;
+    color: white;
+    padding: 0.55rem;
+    transition: all 0.2s;
+    border-radius: 0.25rem;
+    font-family: 'Poppins', sans-serif;
+    /* Assuming you want to use Poppins font */
+    display: flex;
+    align-items: center;
+}
+
+.icon-style {
+    width: 1rem;
+    /* Adjust the width as needed */
+    height: 1rem;
+    /* Adjust the height as needed */
+    object-fit: cover;
+    margin-right: 0.5rem;
+}
+
+.link-style:hover {
+    text-opacity: 50%;
 }
 </style>

@@ -1,7 +1,6 @@
 <template>
-    <div class="mx-auto">
+    <div class="mx-auto " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
         <SalesText />
-        <PopUp />
         <InfiniteSlider />
 
         <section class="overflow-hidden    md:p-8 ">
@@ -17,14 +16,15 @@
                             comfortable and stylish for a long time, providing excellent value for your money.
                         </p>
                         <div class="mt-4  sm:mt-8">
-                            <router-link to="/LatestArrival" @click="randomColor"
+                            <router-link to="/AllTshirt" @click="randomColor"
                                 class="inline-block md:w-56 rounded-full bg-green border hover:bg-opacity-0  hover:bg-gray-50 border-gray-900 text-white   px-4 sm:px-12 py-3 text-sm font-medium hover:text-black bg-black transition  ">
                                 Get your cool now!
                             </router-link>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gradient-to-r from-gray-400 via-gray-600 flex items-center justify-center   to-blue-800">
+                <div
+                    class="bg-gradient-to-r from-gray-400 via-gray-600 flex items-center justify-center  to-blue-800 md:w-[400px]">
                     <img rel="preload" class="w-[350px] h-[350px] object-cover max-w-full max-h-full "
                         :src="currentImage" />
                 </div>
@@ -34,10 +34,15 @@
 </template>
   
 <script>
-import PopUp from '@/components/common/PopUp.vue';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 export default {
     components: {
-        PopUp
+
     },
 
 

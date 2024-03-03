@@ -4,7 +4,7 @@
             <p>{{ salesText }}</p>
 
             <button @click="redirectToSalesPage"
-                class="shopnow inline-flex sm:h-8 sm:text-xs items-center justify-center h-10 px-8 m-5 font-medium tracking-wide text-white transition duration-200 bg-gradient-to-r from-indigo-300 to-purple-400 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
+                class="shopnow animate__animated animate__bounce inline-flex sm:h-8 sm:text-xs items-center justify-center h-10 px-8 m-5 font-medium tracking-wide text-white transition duration-200 bg-gradient-to-r from-indigo-300 to-purple-400 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
                 {{ buttonText }}
             </button>
         </div>
@@ -26,6 +26,18 @@ export default {
             currentGradientIndex: 0,
             intervalId: null,
             intervalDuration: 10000, // Interval duration in milliseconds (10 seconds)
+            saleTexts: [
+                "Summer Sale! Up to 50% Off",
+                "Winter Clearance! Don't Miss Out!",
+                "Spring Fever Sale! Grab Your Favorites!",
+                // Add more sales texts as needed
+            ],
+            buttonTexts: [
+                "Shop Now",
+                "Check it Out",
+                "Sale now",
+                // Add more button texts as needed
+            ]
         };
     },
     computed: {
@@ -39,11 +51,15 @@ export default {
             // You can use Vue Router or a simple window.location.href
             // Example with Vue Router: this.$router.push("/sales");
         },
-        changeBackground() {
+        changeBackgroundAndText() {
             this.currentGradientIndex = (this.currentGradientIndex + 1) % this.gradients.length;
+            // Randomly select a sales text and button text
+            const randomIndex = Math.floor(Math.random() * this.saleTexts.length);
+            this.salesText = this.saleTexts[randomIndex];
+            this.buttonText = this.buttonTexts[randomIndex];
         },
         startBackgroundChangeInterval() {
-            this.intervalId = setInterval(this.changeBackground, this.intervalDuration);
+            this.intervalId = setInterval(this.changeBackgroundAndText, this.intervalDuration);
         },
         stopBackgroundChangeInterval() {
             clearInterval(this.intervalId);
@@ -112,7 +128,6 @@ p {
         padding-right: 20px;
         font-size: 12px;
         display: flex;
-
     }
 }
 </style>

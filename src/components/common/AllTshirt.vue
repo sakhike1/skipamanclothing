@@ -1,12 +1,13 @@
 <template>
 
-    <div class="allitems">
+    <div class="allitems ">
         <SalesText />
         <section id="Projects"
             class="w-fit mx-auto  grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center p-20 justify-center gap-y-20 gap-x-14 ">
 
 
-            <div v-for="items in topRated" :key="items.id" v-on:click="foodDetails(items)"
+            <div v-for="items in topRated" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
+                data-aos-duration="3000"
                 class="w-73 bg-gradient-to-r from-gray-100 to-gray-300 shadow-md  rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
 
                 <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96   rounded-t-xl" />
@@ -45,7 +46,8 @@
 
 
             </div>
-            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)"
+            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
+                data-aos-duration="3000"
                 class="w-73 bg-gradient-to-r from-gray-100 to-gray-300 shadow-md  rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <div></div>
                 <a href="#">
@@ -86,7 +88,8 @@
 
             </div>
 
-            <div v-for="items in dishesNearYou" :key="items.id" v-on:click="foodDetails(items)"
+            <div v-for="items in dishesNearYou" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
+                data-aos-duration="3000"
                 class="w-73 bg-gradient-to-r from-gray-100 to-gray-300 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <a href="#">
                     <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96   rounded-t-xl" />
@@ -128,7 +131,8 @@
 
             </div>
 
-            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)"
+            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
+                data-aos-duration="3000"
                 class="w-73 bg-gradient-to-r from-gray-100 to-gray-300 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <a href="#">
                     <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96   rounded-t-xl" />
@@ -180,6 +184,10 @@
 
 import StarRating from "@/components/common/StarRating.vue";
 import SalesText from "@/components/common/SalesText.vue";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 export default {
     components: {
