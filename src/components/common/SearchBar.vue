@@ -4,10 +4,10 @@
             class="relative flex flex-wrap items-center justify-between bg-gray-50 py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
             <div class="flex w-full flex-wrap items-center justify-between px-3">
                 <div class="flex m-3 space-x-4">
-                    <router-link to="AllTshirt" class="text-black text-xs hover:text-gray-500">Trending</router-link>
-                    <router-link to="/LatestArrivals"
-                        class="text-black text-xs hover:text-gray-500">Accessories</router-link>
-                    <router-link to="/AllTshirt" class="text-black text-xs hover:text-gray-500">Fleece</router-link>
+                    <router-link to="/TrendingItems"
+                        class="text-black text-xs hover:text-gray-500">Trending</router-link>
+                    <router-link to="/AmazazaView" class="text-black text-xs hover:text-gray-500">amazaza</router-link>
+                    <router-link to="/AmazazaView" class="text-black text-xs hover:text-gray-500">Fleece</router-link>
                     <router-link to="/LatestArrivals"
                         class="text-black text-xs hover:text-gray-500">Explore</router-link>
                     <router-link to="/AllTshirt" class="text-red-400 text-xs hover:text-gray-500">SALE</router-link>

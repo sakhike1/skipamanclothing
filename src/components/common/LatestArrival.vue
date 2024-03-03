@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div ref="slider" class="keen-slider">
+        <div ref="slider" class="keen-slider h-[670px]">
             <div class="keen-slider__slide number-slide1">
                 <img class="object-cover h-full w-full" :src="require('@/assets/men.jpg')" />
             </div>
@@ -21,7 +21,7 @@
         </div>
     </div>
 </template>
-  
+
 <script>
 import TshirtsCard from "@/components/common/TshirtsCard.vue"
 import LastSlider from "@/components/common/LastSlider.vue"
@@ -79,8 +79,7 @@ export default {
     },
 }
 </script>
-  
+
 <style>
 /* Your styles here */
 </style>
-  

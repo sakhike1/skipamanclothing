@@ -7,6 +7,8 @@ import ClientLogin  from "../components/common/ClientLogin.vue"
 import LatestArrival from "../components/common/LatestArrival.vue";
 import CreateAccount from "../views/CreateAccount.vue"
 import AllTshirt from '../components/common/AllTshirt.vue';
+import TrendingItems from '../components/common/TrendingItems.vue';
+import AmazazaView from  '../components/common/AmazazaView.vue';
 
 
 Vue.use(VueRouter);
@@ -23,6 +25,8 @@ const routes = [
   {path: '/ClientLogin', component: ClientLogin},
   {path: '/CreateAccount', component: CreateAccount},
   {path: '/AllTshirt', component: AllTshirt},
+  {path: '/TrendingItems', component: TrendingItems},
+  {path: '/AmazazaView', component: AmazazaView}
 ];
 
 const router = new VueRouter({

@@ -19,14 +19,16 @@
             <div class="hidden md:flex items-center p-2">
                 <div class="md:flex lg:ml-auto lg:flex lg:items-center lg:space-x-8 xl:space-x-10">
                     <router-link to="/ClientLogin" title="" class="link-style">
-                        <img class="icon-style" :src="require('@/assets/user4.png')" alt="My Image" />
+                        <img class="icon-style" :src="require('@/assets/user4.png')" alt="User" width="32"
+                            height="32" />
                     </router-link>
                     <router-link to="CreateAccount" title="" class="link-style">
-                        <img class="icon-style" :src="require('@/assets/ad.png')" alt="My Image" />
+                        <img class="icon-style" :src="require('@/assets/ad.png')" alt="Advertisement" width="32"
+                            height="32" />
                     </router-link>
                     <router-link to="/cart" title="" class="link-style">
-                        <img class="icon-style" :src="require('@/assets/shopping2.png')" alt="Cart" />
-
+                        <img class="icon-style" :src="require('@/assets/shopping2.png')" alt="Cart" width="32"
+                            height="32" />
                     </router-link>
                     {{ count }}
                 </div>
