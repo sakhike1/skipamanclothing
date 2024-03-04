@@ -1,243 +1,146 @@
 <template>
-
-    <div class="allitems ">
-        <SalesText />
-        <section id="Projects"
-            class="w-fit mx-auto  grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center p-20 justify-center gap-y-20 gap-x-14 ">
-
-
-            <div v-for="items in topRated" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
-                data-aos-duration="3000"
-                class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md  rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-
-                <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96   rounded-t-xl" />
-                <hr class="w-full h-[0.4px]  bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
-                <div class="px-4 py-3 w-72">
-                    <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
-                    <p class="text-lg font-bold text-gray-400 truncate block capitalize">100% Cotton Crew neck </p>
-                    <p class="text-xs  text-gray-500 ">designed with heavier cotton
-                        fabric, double-stitched neckline, and fitted sleeves, elevating a basic t-shirt into a
-                        timeless short-sleeve style</p>
-
-                    <div class="flex items-center">
-                        <del>
-                            <p class="text-sm text-gray-600 px-4 cursor-auto ml-2">R250</p>
-                        </del>
-
-                        <p class="text-lg font-semibold text-green-400 cursor-auto my-3">R199</p>
-
-
-                    </div>
-                    <StarRating />
-                    <button v-on:click="foodDetails(items)"><button
-                            class="relative  items-center justify-start inline-block px-4 py-3 overflow-hidden  rounded-full group">
-                            <span
-                                class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-                            <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600
-                                 opacity-50 group-hover:-translate-x-8"></span>
-                            <span
-                                class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900">View
-                                Products
-                            </span>
-                            <span class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"></span>
-                        </button>
-                    </button>
-                </div>
-
-
-            </div>
-            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
-                data-aos-duration="3000"
-                class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md  rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                <div></div>
-                <a href="#">
-                    <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96   rounded-t-xl" />
-                    <hr class="w-full h-[0.4px]  bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
-                    <div class="px-4 py-3 w-72">
-                        <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
-                        <p class="text-lg font-bold text-gray-400 truncate block capitalize">100% Cotton Crew neck </p>
-                        <p class="text-xs font-bold text-gray-500 ">designed with heavier cotton
-                            fabric, double-stitched neckline, and fitted sleeves, elevating a basic t-shirt into a
-                            timeless short-sleeve style</p>
-                        <div class="flex items-center">
-                            <del>
-                                <p class="text-sm text-gray-600 px-5 cursor-auto ml-2">R250</p>
-                            </del>
-
-                            <p class="text-lg font-semibold text-green-400 cursor-auto my-3">R199</p>
-
-
-                        </div>
-                        <StarRating />
-                        <button v-on:click="foodDetails(items)"><button
-                                class="relative  items-center justify-start inline-block px-4 py-3 overflow-hidden  rounded-full group">
-                                <span
-                                    class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-                                <span
-                                    class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 opacity-50 group-hover:-translate-x-8"></span>
-                                <span
-                                    class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900">View
-                                    Products
-                                </span>
-                                <span class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"></span>
-                            </button>
-                        </button>
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div v-for="items in dishesNearYou" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
-                data-aos-duration="3000"
-                class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                <a href="#">
-                    <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96   rounded-t-xl" />
-                    <hr class="w-full h-[0.4px]  bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
-                    <div class="px-4 py-3 w-72">
-                        <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
-                        <p class="text-lg font-bold text-gray-400 truncate block capitalize">100% Cotton Graphic t-shirt
-                        </p>
-                        <p class="text-xs font-bold text-gray-500  ">Add flair and vibrancy to your
-                            your look with a graphic tee you bound to stand out like you outside get some skipaman and
-                            apply
-                            dopeness to your mess </p>
-                        <div class="flex items-center">
-                            <del>
-                                <p class="text-sm text-gray-600 cursor-auto px-5 ml-2">R250</p>
-                            </del>
-
-                            <p class="text-lg font-semibold text-green-400 cursor-auto my-3">R199</p>
-
-
-                        </div>
-                        <StarRating />
-                        <button v-on:click="foodDetails(items)"><button
-                                class="relative  items-center justify-start inline-block px-4 py-3 overflow-hidden  rounded-full group">
-                                <span
-                                    class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-                                <span
-                                    class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 opacity-50 group-hover:-translate-x-8"></span>
-                                <span
-                                    class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900">View
-                                    Products
-                                </span>
-                                <span class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"></span>
-                            </button>
-                        </button>
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div v-for="items in allCategories" :key="items.id" v-on:click="foodDetails(items)" data-aos="fade-up"
-                data-aos-duration="3000"
-                class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                <a href="#">
-                    <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96   rounded-t-xl" />
-                    <hr class="w-full h-[0.4px]  bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
-                    <div class="px-4 py-3 w-72">
-                        <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
-                        <p class="text-lg font-bold text-gray-400 ">100% cotton Heavy T-shirts
-                        </p>
-                        <p class="text-xs font-bold text-gray-500 ">Ideal for cooler temperatures, these t-shirts are
-                            more
-                            durable and made with thicker fabrics to keep wearers warm.
-                        </p>
-                        <div class="flex items-center">
-                            <del>
-                                <p class="text-sm text-gray-600 px-5 cursor-auto ml-2">R250</p>
-                            </del>
-
-                            <p class="text-lg font-semibold text-green-400 cursor-auto my-3">R199</p>
-
-
-                        </div>
-                        <star-rating />
-                        <button v-on:click="foodDetails(items)"><button
-                                class="relative  items-center justify-start inline-block px-4 py-3 overflow-hidden  rounded-full group">
-                                <span
-                                    class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-                                <span
-                                    class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 opacity-50 group-hover:-translate-x-8"></span>
-                                <span
-                                    class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900">View
-                                    Products
-                                </span>
-                                <span class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"></span>
-                            </button>
-                        </button>
-                    </div>
-
-                </a>
-
-            </div>
-
-
-
-        </section>
+    <div ref="slider" class="keen-slider h-[670px]" style="height: 500px">
+        <div class="keen-slider__slide number-slide1"><img
+                class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
+                :src="require('@/assets/zaza18.png')" /></div>
+        <div class="keen-slider__slide number-slide2"><img
+                class="object-contain h-full w-full bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700"
+                :src="require('@/assets/zaza2.png')" /></div>
+        <div class="keen-slider__slide number-slide3"><img
+                class="object-contain h-full w-full bg-gradient-to-b from-orange-500 to-yellow-300"
+                :src="require('@/assets/zaza15.png')" /></div>
+        <div class="keen-slider__slide number-slide4"><img
+                class="object-contain h-full w-full bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700"
+                :src="require('@/assets/zaza10.png')" /></div>
+        <div class="keen-slider__slide number-slide5"><img
+                class="object-contain h-full w-full bg-gradient-to-b from-orange-500 to-yellow-300"
+                :src="require('@/assets/zaza18.png')" /></div>
+        <div class="keen-slider__slide number-slide6"><img
+                class="object-contain h-full w-full bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700"
+                :src="require('@/assets/zaza15.png')" /></div>
     </div>
 </template>
 
 <script>
-
-import StarRating from "@/components/common/StarRating.vue";
-import SalesText from "@/components/common/SalesText.vue";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-AOS.init();
+import "keen-slider/keen-slider.min.css"
+import KeenSlider from "keen-slider"
 
 export default {
     components: {
-        StarRating,
-        SalesText
+
+
 
     },
-    computed: {
-        topRated() {
-            return this.$store.state.topRated;
-        },
-        allCategories() {
-            return this.$store.state.allCategories;
-        },
-        dishesNearYou() {
-            return this.$store.state.dishesNearYou;
-        },
-        trendingItems() {
-            return this.$store.state.trendingItems;
-        },
+    name: "TheSlider",
+    mounted() {
+        this.slider = new KeenSlider(
+            this.$refs.slider,
+            {
+                loop: true,
+            },
+            [
+                (slider) => {
+                    let timeout
+                    let mouseOver = false
+                    function clearNextTimeout() {
+                        clearTimeout(timeout)
+                    }
+                    function nextTimeout() {
+                        clearTimeout(timeout)
+                        if (mouseOver) return
+                        timeout = setTimeout(() => {
+                            slider.next()
+                        }, 2000)
+                    }
+                    slider.on("created", () => {
+                        slider.container.addEventListener("mouseover", () => {
+                            mouseOver = true
+                            clearNextTimeout()
+                        })
+                        slider.container.addEventListener("mouseout", () => {
+                            mouseOver = false
+                            nextTimeout()
+                        })
+                        nextTimeout()
+                    })
+                    slider.on("dragStarted", clearNextTimeout)
+                    slider.on("animationEnded", nextTimeout)
+                    slider.on("updated", nextTimeout)
+                },
+            ]
+        )
     },
-    methods: {
-        foodDetails(items) {
-            this.$router.push({ name: "food-details", params: items });
-        }
-    }
-
+    beforeDestroy() {
+        if (this.slider) this.slider.destroy()
+    },
 }
-
 </script>
 
+
+
 <style>
-.responsive-three-column-grid {
-    display: block;
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.responsive-three-column-grid>* {
-    padding: 1rem;
+[class^="number-slide"],
+[class*=" number-slide"] {
+    background: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+    height: 700px;
+    max-height: 200vh;
 }
 
-@media (min-width:768px) {
-    .responsive-three-column-grid {
-        display: grid;
-        grid-auto-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+.number-slide1 {
+    background: rgb(64, 175, 255);
+    background: linear-gradient(128deg,
+            rgba(64, 175, 255, 1) 0%,
+            rgba(63, 97, 255, 1) 100%);
 }
 
-.allitems {
-    background: rgb(202, 199, 200);
-    background: linear-gradient(90deg, rgba(254, 250, 252, 1) 0%, rgba(242, 248, 255, 1) 100%);
+.number-slide2 {
+    background: rgb(255, 75, 64);
+    background: linear-gradient(128deg,
+            rgba(255, 154, 63, 1) 0%,
+            rgba(255, 75, 64, 1) 100%);
+}
+
+.number-slide3 {
+    background: rgb(182, 255, 64);
+    background: linear-gradient(128deg,
+            rgba(182, 255, 64, 1) 0%,
+            rgba(63, 255, 71, 1) 100%);
+    background: linear-gradient(128deg,
+            rgba(189, 255, 83, 1) 0%,
+            rgba(43, 250, 82, 1) 100%);
+}
+
+.number-slide4 {
+    background: rgb(64, 255, 242);
+    background: linear-gradient(128deg,
+            rgba(64, 255, 242, 1) 0%,
+            rgba(63, 188, 255, 1) 100%);
+}
+
+.number-slide5 {
+    background: rgb(255, 64, 156);
+    background: linear-gradient(128deg,
+            rgba(255, 64, 156, 1) 0%,
+            rgba(255, 63, 63, 1) 100%);
+}
+
+.number-slide6 {
+    background: rgb(64, 76, 255);
+    background: linear-gradient(128deg,
+            rgba(64, 76, 255, 1) 0%,
+            rgba(174, 63, 255, 1) 100%);
 }
 </style>
