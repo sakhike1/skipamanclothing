@@ -1,5 +1,5 @@
 <template>
-    <nav class="bg-gray-50 p-8 w-full ">
+    <nav class=" p-8 w-full ">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo and E-commerce Link -->
             <div class="flex text-xs items-center">
@@ -8,7 +8,7 @@
                 <router-link to="/LatestArrivals" class="hidden md:block text-gray-500 px-4">Lates Arrival
                 </router-link>
                 <router-link to="/AllTshirt" class="hidden md:block text-gray-500 px-4">all T-shirt</router-link>
-                <router-link to="/CreateTshirt" class="hidden md:block text-gray-500 px-4">Create your own Skipa
+                <router-link to="/CreateSkipa" class="hidden md:block text-gray-500 px-4">Create your own Skipa
                 </router-link>
 
             </div>

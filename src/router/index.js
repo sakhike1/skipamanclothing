@@ -9,6 +9,8 @@ import CreateAccount from "../views/CreateAccount.vue"
 import AllTshirt from '../components/common/AllTshirt.vue';
 import TrendingItems from '../components/common/TrendingItems.vue';
 import AmazazaView from  '../components/common/AmazazaView.vue';
+import SalesNow  from   '../components/common/SalesNow.vue';
+import CreateSkipa from '../components/common/CreateSkipa.vue';
 
 
 Vue.use(VueRouter);
@@ -26,7 +28,9 @@ const routes = [
   {path: '/CreateAccount', component: CreateAccount},
   {path: '/AllTshirt', component: AllTshirt},
   {path: '/TrendingItems', component: TrendingItems},
-  {path: '/AmazazaView', component: AmazazaView}
+  {path: '/AmazazaView', component: AmazazaView},
+  {path: '/SalesNow', component: SalesNow},
+  {path: '/CreateSkipa', component: CreateSkipa}
 ];
 
 const router = new VueRouter({

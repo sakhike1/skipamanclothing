@@ -7,10 +7,9 @@
                     <router-link to="/TrendingItems"
                         class="text-black text-xs hover:text-gray-500">Trending</router-link>
                     <router-link to="/AmazazaView" class="text-black text-xs hover:text-gray-500">amazaza</router-link>
-                    <router-link to="/AmazazaView" class="text-black text-xs hover:text-gray-500">Fleece</router-link>
                     <router-link to="/LatestArrivals"
                         class="text-black text-xs hover:text-gray-500">Explore</router-link>
-                    <router-link to="/AllTshirt" class="text-red-400 text-xs hover:text-gray-500">SALE</router-link>
+                    <router-link to="/SalesNow" class="text-red-400 text-xs hover:text-gray-500">SALE</router-link>
                 </div>
                 <div class="ml-5 flex w-full lg:w-auto items-center justify-between">
                     <input type="search" v-model="searchQuery" @input="filterItems"

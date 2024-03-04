@@ -1,8 +1,7 @@
 <template>
-    <div v-if="showScrollButton" ref="scrollTopButton" class="fixed bottom-5 right-5">
-        <button @click="scrollToTop"
-            class="bg-gradient-to-r from-slate-500 to-yellow-100 hover:bg-blue-600 text-white font-bold py-2 px-4  shadow-md">
-            Scroll to top
+    <div v-if="showScrollButton" ref="scrollTopButton" class="fixed bottom-[190px] right-10">
+        <button @click="scrollToTop" class="hover:scale-125  text-white font-bold py-2 px-4  ">
+            <img class="h-10 w-10" :src="require('@/assets/up-arrow.png')" />
         </button>
     </div>
 </template>
