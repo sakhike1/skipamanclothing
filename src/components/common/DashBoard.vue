@@ -231,8 +231,5 @@ export default {
     }
 }
 
-.allitems {
-    background: rgb(202, 199, 200);
-    background: linear-gradient(90deg, rgba(254, 250, 252, 1) 0%, rgba(242, 248, 255, 1) 100%);
-}
+.allitems {}
 </style>

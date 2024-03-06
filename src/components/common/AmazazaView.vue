@@ -1,22 +1,22 @@
 <template>
     <div ref="slider" class="keen-slider h-[670px]" style="height: 500px">
         <div class="keen-slider__slide number-slide1"><img
-                class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
+                class="object-contain h-full w-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-200 via-violet-600 to-sky-900"
                 :src="require('@/assets/zaza18.png')" /></div>
         <div class="keen-slider__slide number-slide2"><img
                 class="object-contain h-full w-full bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700"
                 :src="require('@/assets/zaza2.png')" /></div>
         <div class="keen-slider__slide number-slide3"><img
-                class="object-contain h-full w-full bg-gradient-to-b from-orange-500 to-yellow-300"
+                class="object-contain h-full w-full bg-gradient-to-t from-orange-400 to-sky-400"
                 :src="require('@/assets/zaza15.png')" /></div>
         <div class="keen-slider__slide number-slide4"><img
                 class="object-contain h-full w-full bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700"
                 :src="require('@/assets/zaza10.png')" /></div>
         <div class="keen-slider__slide number-slide5"><img
-                class="object-contain h-full w-full bg-gradient-to-b from-orange-500 to-yellow-300"
+                class="object-contain h-full w-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-900 to-yellow-300"
                 :src="require('@/assets/zaza18.png')" /></div>
         <div class="keen-slider__slide number-slide6"><img
-                class="object-contain h-full w-full bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700"
+                class="object-contain h-full w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800"
                 :src="require('@/assets/zaza15.png')" /></div>
     </div>
 </template>

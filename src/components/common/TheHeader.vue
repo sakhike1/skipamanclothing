@@ -16,19 +16,16 @@
             <!-- Navigation Links -->
 
             <!-- Search Bar -->
-            <div class="hidden md:flex items-center p-2">
-                <div class="md:flex lg:ml-auto lg:flex lg:items-center lg:space-x-8 xl:space-x-10">
+            <div class="hidden font-bold text-gray-400 md:flex items-center">
+                <div class="md:flex  lg:ml-auto lg:flex lg:items-center lg:space-x-8 xl:space-x-10">
                     <router-link to="/ClientLogin" title="" class="link-style">
-                        <img class="icon-style" :src="require('@/assets/user4.png')" alt="User" width="32"
-                            height="32" />
+                        <img class="icon-style" :src="require('@/assets/locked.png')" alt="User" />
                     </router-link>
                     <router-link to="CreateAccount" title="" class="link-style">
-                        <img class="icon-style" :src="require('@/assets/ad.png')" alt="Advertisement" width="32"
-                            height="32" />
+                        <img class="icon-styles" :src="require('@/assets/user6.png')" alt="Advertisement" />
                     </router-link>
                     <router-link to="/cart" title="" class="link-style">
-                        <img class="icon-style" :src="require('@/assets/shopping2.png')" alt="Cart" width="32"
-                            height="32" />
+                        <img class="icon-styling" :src="require('@/assets/empty.png')" alt="Cart" />
                     </router-link>
                     {{ count }}
                 </div>
@@ -141,13 +138,26 @@ nav {
     align-items: center;
 }
 
+
 .icon-style {
-    width: 1rem;
-    /* Adjust the width as needed */
-    height: 1rem;
-    /* Adjust the height as needed */
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.2rem;
     object-fit: cover;
-    margin-right: 0.5rem;
+}
+
+.icon-styles {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 0.2rem;
+    object-fit: cover;
+}
+
+.icon-styling {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 0.2rem;
+    object-fit: cover;
 }
 
 .link-style:hover {

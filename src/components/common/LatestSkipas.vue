@@ -1,9 +1,11 @@
 <template>
-    <div class="mx-auto " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+    <div class="mx-auto" style=" background: rgb(202, 199, 200);
+    background: linear-gradient(90deg, rgba(254, 250, 252, 1) 0%, rgba(242, 248, 255, 1) 100%);">
         <SalesText />
         <InfiniteSlider />
 
-        <section class="overflow-hidden    md:p-8 ">
+        <section data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"
+            class="overflow-hidden     md:p-8 ">
             <div class="flex flex-col w-[85%] md:flex-row mx-auto">
                 <div :style="{ background: color }"
                     class="p-4 sm:p-8 lg:p-16  md:w-56 lg:w-48 flex-grow order-last md:order-first">
@@ -120,9 +122,14 @@ export default {
     transform: scale(1.1);
 }
 
-.mx-auto {
+
+.overflow-hidden {
+    background: rgb(202, 199, 200);
     background: linear-gradient(90deg, rgba(254, 250, 252, 1) 0%, rgba(242, 248, 255, 1) 100%);
+
 }
+
+
 
 @media screen and (min-width: 640px) {
     .text-center {

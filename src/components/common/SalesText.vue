@@ -1,5 +1,6 @@
 <template>
-    <div class="mx-auto">
+    <div class="mx-auto" style=" background: rgb(202, 199, 200);
+    background: linear-gradient(90deg, rgba(254, 250, 252, 1) 0%, rgba(242, 248, 255, 1) 100%);">
         <div class="scrolling-text-container ">
             <div class="scrolling-text text-black">
                 <div class="flex items-center mb-10">
@@ -25,7 +26,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 @keyframes scrollTextAnimation {
     0% {
         transform: translateX(-100%);
@@ -91,6 +92,7 @@ export default {
 .scrolling-text-container {}
 
 .mx-auto {
+    background: rgb(202, 199, 200);
     background: linear-gradient(90deg, rgba(254, 250, 252, 1) 0%, rgba(242, 248, 255, 1) 100%);
 }
 </style>
