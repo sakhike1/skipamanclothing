@@ -5,10 +5,10 @@
             <div class="flex text-xs items-center">
                 <router-link to="/" class="text-white font-bold text-xl pr-4"><img :src="require('@/assets/image.png')"
                         class="h-8 ms-2" alt="" /></router-link>
-                <router-link to="/LatestArrivals" class="hidden md:block text-gray-500 px-4">Lates Arrival
+                <router-link to="/LatestArrivals" class="hidden md:block text-gray-400 px-4">Lates Arrival
                 </router-link>
-                <router-link to="/AllTshirt" class="hidden md:block text-gray-500 px-4">all T-shirt</router-link>
-                <router-link to="/CreateSkipa" class="hidden md:block text-gray-500 px-4">Create your own Skipa
+                <router-link to="/AllTshirt" class="hidden md:block text-gray-400 px-4">all T-shirt</router-link>
+                <router-link to="/CreateSkipa" class="hidden md:block text-gray-400 px-4">Create your own Skipa
                 </router-link>
 
             </div>
@@ -16,16 +16,16 @@
             <!-- Navigation Links -->
 
             <!-- Search Bar -->
-            <div class="hidden font-bold text-gray-400 md:flex items-center">
-                <div class="md:flex  lg:ml-auto lg:flex lg:items-center lg:space-x-8 xl:space-x-10">
+            <div class="font-bold text-gray-400 flex items-center md:place-items-stretch md:flex-col">
+                <div class="flex items-center space-x-4 lg:ml-auto md:mt-2 md:ml-0">
                     <router-link to="/ClientLogin" title="" class="link-style">
                         <img class="icon-style" :src="require('@/assets/locked.png')" alt="User" />
                     </router-link>
-                    <router-link to="CreateAccount" title="" class="link-style">
-                        <img class="icon-styles" :src="require('@/assets/user6.png')" alt="Advertisement" />
+                    <router-link to="/CreateAccount" title="" class="link-style">
+                        <img class="icon-style" :src="require('@/assets/user6.png')" alt="Advertisement" />
                     </router-link>
                     <router-link to="/cart" title="" class="link-style">
-                        <img class="icon-styling" :src="require('@/assets/empty.png')" alt="Cart" />
+                        <img class="icon-style" :src="require('@/assets/empty.png')" alt="Cart" />
                     </router-link>
                     {{ count }}
                 </div>
@@ -140,22 +140,22 @@ nav {
 
 
 .icon-style {
-    height: 1.3rem;
-    width: 1.3rem;
+    height: 1.1rem;
+    width: 1.1rem;
     margin-right: 0.2rem;
     object-fit: cover;
 }
 
 .icon-styles {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 1.1rem;
+    width: 1.1rem;
     margin-right: 0.2rem;
     object-fit: cover;
 }
 
 .icon-styling {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 1.1rem;
+    width: 1.1rem;
     margin-right: 0.2rem;
     object-fit: cover;
 }

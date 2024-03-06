@@ -10,7 +10,7 @@
                     :src="require('@/assets/sales2.png')" />
             </div>
             <div class="keen-slider__slide number-slide3"><img
-                    class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
+                    class="object-contain md:h- md:w-full h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
                     :src="require('@/assets/sales3.png')" /></div>
             <div class="keen-slider__slide number-slide4"><img
                     class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
@@ -23,24 +23,30 @@
                     :src="require('@/assets/sales6.png')" /></div>
         </div>
         <div ref="thumbnail" class="keen-slider thumbnail h-[300px]">
-            <div class="keen-slider__slide number-slide1"><img
-                    class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
-                    :src="require('@/assets/sales1.png')" /></div>
-            <div class="keen-slider__slide number-slide2"> <img
-                    class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
-                    :src="require('@/assets/sales2.png')" /></div>
-            <div class="keen-slider__slide number-slide3"><img
-                    class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
-                    :src="require('@/assets/sales3.png')" /></div>
-            <div class="keen-slider__slide number-slide4"><img
-                    class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
-                    :src="require('@/assets/sales4.png')" /></div>
-            <div class="keen-slider__slide number-slide5"><img
-                    class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
-                    :src="require('@/assets/sales5.png')" /></div>
-            <div class="keen-slider__slide number-slide6"><img
-                    class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
-                    :src="require('@/assets/sales6.png')" /></div>
+            <div class="keen-slider__slide number-slide1">
+                <img class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
+                    :src="require('@/assets/sales1.png')" />
+            </div>
+            <div class="keen-slider__slide number-slide2">
+                <img class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
+                    :src="require('@/assets/sales2.png')" />
+            </div>
+            <div class="keen-slider__slide number-slide3">
+                <img class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
+                    :src="require('@/assets/sales3.png')" />
+            </div>
+            <div class="keen-slider__slide number-slide4">
+                <img class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
+                    :src="require('@/assets/sales4.png')" />
+            </div>
+            <div class="keen-slider__slide number-slide5">
+                <img class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
+                    :src="require('@/assets/sales5.png')" />
+            </div>
+            <div class="keen-slider__slide number-slide6">
+                <img class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
+                    :src="require('@/assets/sales6.png')" />
+            </div>
         </div>
     </div>
 </template>
@@ -171,5 +177,17 @@ export default {
 
 .thumbnail .keen-slider__slide {
     cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .thumbnail {
+        height: 200px;
+        /* Adjust height as needed */
+    }
+
+    .keen-slider__slide img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 </style>
