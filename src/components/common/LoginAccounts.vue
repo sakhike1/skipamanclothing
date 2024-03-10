@@ -24,7 +24,7 @@
                                     </path>
                                 </svg>
                             </span>
-                            <input type="text" id="sign-in-email"
+                            <input v-model="text" type="text" id="sign-in-email"
                                 class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                                 placeholder="Your email" />
                         </div>
@@ -40,7 +40,7 @@
                                     </path>
                                 </svg>
                             </span>
-                            <input type="password" id="sign-in-email"
+                            <input v-model="password" type="password" id="sign-in-email"
                                 class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                                 placeholder="Your password" />
                         </div>
@@ -74,17 +74,18 @@
         <MyVideo />
     </div>
 </template>
-  
+
 <script>
 import MyVideo from '@/components/MyVideo.vue'
 export default {
     components: {
         MyVideo
     },
+
 };
 </script>
-  
-<style  scoped>
+
+<style scoped>
 .video-bg {
     position: fixed;
     top: 0;
@@ -162,4 +163,3 @@ export default {
     }
 }
 </style>
-  

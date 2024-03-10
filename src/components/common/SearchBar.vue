@@ -7,7 +7,7 @@
                     <router-link to="/TrendingItems"
                         class="text-gray-500 text-xs hover:text-gray-300">Trending</router-link>
                     <router-link to="/AmazazaView"
-                        class="text-gray-500 text-xs hover:text-gray-300">amazaza</router-link>
+                        class="text-gray-500 text-xs hover:text-gray-00">amazaza</router-link>
                     <router-link to="/LatestArrivals"
                         class="text-gray-500 text-xs hover:text-gray-300">Explore</router-link>
                     <router-link to="/SalesNow" class="text-red-400 text-xs hover:text-gray-500">SALE</router-link>
@@ -62,9 +62,6 @@ export default {
         this.filteredItems = [...this.items];
     }
 };
-
-
-
 </script>
 
 <style scoped>

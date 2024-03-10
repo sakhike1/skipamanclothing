@@ -1,10 +1,10 @@
 <template>
-    <div ref="slider" class="keen-slider h-[670px]" style="height: 500px">
+    <div ref="slider" class="keen-slider h-[670px] sm:h-[500px] md:h-[800px]" style="height: 500px">
         <div class="keen-slider__slide number-slide1"><img
                 class="object-contain h-full w-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-200 via-violet-600 to-sky-900"
                 :src="require('@/assets/zaza18.png')" /></div>
         <div class="keen-slider__slide number-slide2"><img
-                class="object-contain h-full w-full bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700"
+                class="object-contain h-full w-full  bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700"
                 :src="require('@/assets/zaza2.png')" /></div>
         <div class="keen-slider__slide number-slide3"><img
                 class="object-contain h-full w-full bg-gradient-to-t from-orange-400 to-sky-400"
@@ -142,5 +142,14 @@ body {
     background: linear-gradient(128deg,
             rgba(64, 76, 255, 1) 0%,
             rgba(174, 63, 255, 1) 100%);
+}
+
+
+@media (min-width: 380px) and (max-width: 911px) {
+    .keen-slider__slide img {
+        height: 1000px;
+        object-fit: cover;
+        /* Adjust height as needed */
+    }
 }
 </style>

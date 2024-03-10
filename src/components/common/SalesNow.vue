@@ -22,7 +22,7 @@
                     class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
                     :src="require('@/assets/sales6.png')" /></div>
         </div>
-        <div ref="thumbnail" class="keen-slider thumbnail h-[300px]">
+        <div ref="thumbnail" class="keen-slider thumbnail ">
             <div class="keen-slider__slide number-slide1">
                 <img class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
                     :src="require('@/assets/sales1.png')" />
@@ -172,7 +172,7 @@ export default {
 .thumbnail .keen-slider__slide {
     font-size: 30px;
     margin-top: 10px;
-    height: 100px;
+    height: 400px;
 }
 
 .thumbnail .keen-slider__slide {
@@ -181,13 +181,55 @@ export default {
 
 @media (max-width: 640px) {
     .thumbnail {
-        height: 200px;
+        height: 305px;
         /* Adjust height as needed */
     }
+    
 
     .keen-slider__slide img {
         max-width: 100%;
         max-height: 100%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .thumbnail {
+        height: 305px; /* Adjust height as needed */
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1180px) {
+    .thumbnail {
+        height: 305px; /* Adjust height as needed */
+    }
+}
+
+@media (min-width: 433px) and (max-width: 620px) {
+    .thumbnail {
+        height: 305px; /* Adjust height as needed */
+    }
+}
+
+@media (min-width: 380px) and (max-width: 610px) {
+    .thumbnail {
+        height: 305px; /* Adjust height as needed */
+    }
+}
+@media (min-width: 400px) and (max-width: 606px) {
+    .thumbnail {
+        height: 270px; /* Adjust height as needed */
+    }
+}
+
+@media (min-width: 380px) and (max-width: 606px) {
+    .thumbnail {
+        height: 250px; /* Adjust height as needed */
+    }
+}
+@media (min-width: 1182px)  {
+    .thumbnail {
+        height: 330px; /* Adjust height as needed */
     }
 }
 </style>
