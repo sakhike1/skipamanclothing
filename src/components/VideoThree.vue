@@ -1,9 +1,9 @@
 <template>
     <video autoplay muted loop class="video-bg" ref="videoPlayer" width="400" height="600">
-        <source src="@/assets/Noitem.mp4" type="video/mp4">
+        <source :src="videoSrc" type="video/mp4">
     </video>
 </template>
-  
+
 <script>
 export default {
     data() {
@@ -14,6 +14,14 @@ export default {
     mounted() {
         this.$refs.videoPlayer.play();
     },
+    methods: {
+        playVideo() {
+            this.$refs.videoPlayer.play();
+        }
+    },
+    beforeDestroy() {
+        this.$refs.videoPlayer.removeEventListener('loadedmetadata', this.playVideo);
+    }
 };
 </script>
 
@@ -28,4 +36,3 @@ export default {
     z-index: -1;
 }
 </style>
-  
