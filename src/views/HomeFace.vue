@@ -1,7 +1,7 @@
 <template>
     <div class="HomeFace 
     ">
-        <sales-text />
+        <SalesText />
         <LatestSkipas />
 
 
@@ -11,11 +11,11 @@
 
     </div>
 </template>
-  
+
 <script>
 // @ is an alias to /src
 
-import SalesText from "@/components/common/SalesText.vue";
+import SalesText from "../components/common/SalesText.vue";
 import LatestSkipas from '../components/common/LatestSkipas.vue';
 import DashBoard from "../components/common/DashBoard.vue";
 
@@ -23,7 +23,9 @@ import DashBoard from "../components/common/DashBoard.vue";
 
 
 export default {
+    name: 'HomeFace',
     components: { DashBoard, LatestSkipas, SalesText },
+
     data() {
         return {
 
@@ -44,5 +46,5 @@ export default {
     }
 };
 </script>
-  
-<style ></style>
+
+<style></style>

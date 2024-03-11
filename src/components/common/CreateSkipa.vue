@@ -47,7 +47,7 @@ export default {
 }
 
 #floating-container {
-    transform: translateY(-10%);
+    transform: translateY(-7%);
     animation: floater 5s infinite ease-in-out;
     transition: ease 0.9s;
 
@@ -57,11 +57,11 @@ export default {
 
     0%,
     100% {
-        transform: translateY(-10%);
+        transform: translateY(-5%);
     }
 
     50% {
-        transform: translateY(10%);
+        transform: translateY(5%);
     }
 }
 </style>

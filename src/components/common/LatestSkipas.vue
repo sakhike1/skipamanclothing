@@ -1,8 +1,7 @@
 <template>
     <div class="mx-auto" style=" background: rgb(202, 199, 200);
     background: linear-gradient(90deg, rgba(254, 250, 252, 1) 0%, rgba(242, 248, 255, 1) 100%);">
-        <SalesText />
-        <InfiniteSlider />
+
 
         <section data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"
             class="overflow-hidden     md:p-8 ">
@@ -34,7 +33,7 @@
         </section>
     </div>
 </template>
-  
+
 <script>
 
 import AOS from 'aos';
@@ -99,8 +98,8 @@ export default {
     },
 };
 </script>
-  
-<style  scoped>
+
+<style scoped>
 .inline-block:hover {
     opacity: 1;
 }

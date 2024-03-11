@@ -42,7 +42,7 @@ export const store = new Vuex.Store({
         todos: [
             { id: 1, name: "Shopping at 7", done: true },
             { id: 2, name: "Learn Vue", done: true },
-            { id: 1, name: "Gaming", done: false }
+            { id: 3, name: "Gaming", done: false }
         ],
 
         imageSources: [

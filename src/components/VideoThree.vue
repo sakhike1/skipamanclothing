@@ -1,5 +1,5 @@
 <template>
-    <video autoplay muted loop class="video-bg" ref="videoPlayer" width="400" height="600">
+    <video autoplay loop muted plays-inline class="video-bg" ref="videoPlayer" width="400" height="600">
         <source :src="videoSrc" type="video/mp4">
     </video>
 </template>
@@ -12,7 +12,7 @@ export default {
         };
     },
     mounted() {
-        this.$refs.videoPlayer.play();
+        this.$refs.videoPlayer.addEventListener('loadeddata', this.playVideo);
     },
     methods: {
         playVideo() {
@@ -20,7 +20,7 @@ export default {
         }
     },
     beforeDestroy() {
-        this.$refs.videoPlayer.removeEventListener('loadedmetadata', this.playVideo);
+        this.$refs.videoPlayer.removeEventListener('loadeddata', this.playVideo);
     }
 };
 </script>
