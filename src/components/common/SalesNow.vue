@@ -180,56 +180,26 @@ export default {
 }
 
 @media (max-width: 640px) {
-    .thumbnail {
-        height: 305px;
-        /* Adjust height as needed */
-    }
-    
 
-    .keen-slider__slide img {
-        max-width: 100%;
-        max-height: 100%;
+    .keen-slider,
+    .thumbnail {
+        height: 300px;
     }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
+
+    .keen-slider,
     .thumbnail {
-        height: 305px; /* Adjust height as needed */
+        height: 350px;
     }
 }
-
 
 @media (min-width: 1025px) and (max-width: 1180px) {
-    .thumbnail {
-        height: 305px; /* Adjust height as needed */
-    }
-}
 
-@media (min-width: 433px) and (max-width: 620px) {
+    .keen-slider,
     .thumbnail {
-        height: 305px; /* Adjust height as needed */
-    }
-}
-
-@media (min-width: 380px) and (max-width: 610px) {
-    .thumbnail {
-        height: 305px; /* Adjust height as needed */
-    }
-}
-@media (min-width: 400px) and (max-width: 606px) {
-    .thumbnail {
-        height: 270px; /* Adjust height as needed */
-    }
-}
-
-@media (min-width: 380px) and (max-width: 606px) {
-    .thumbnail {
-        height: 250px; /* Adjust height as needed */
-    }
-}
-@media (min-width: 1182px)  {
-    .thumbnail {
-        height: 330px; /* Adjust height as needed */
+        height: 400px;
     }
 }
 </style>

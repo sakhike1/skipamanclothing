@@ -15,8 +15,8 @@
             </p>
             <div class="flex flex-wrap justify-center items-center">
               <input v-model="email"
-                class="w-full py-3 px-4 mb-2 mr-0 text-sm text-gray-900 rounded dark:placeholder-gray-300 dark:text-gray-300 dark:bg-gray-600 md:mb-0 md:w-1/2"
-                type="text" placeholder="Type your e-mail">
+                class="w-full py-3 px-4 outline-none mb-2 mr-0 text-sm border-none text-gray-900 rounded dark:placeholder-gray-300 dark:text-gray-300 dark:bg-gray-600 md:mb-0 md:w-1/2"
+                type="text" placeholder="Type your e-mail" autofocus="false">
               <button @click="subscribe"
                 class="w-full px-6 py-3 text-sm font-semibold text-white bg-blue-600 rounded md:w-auto md:ml-2 hover:bg-blue-700">
                 Subscribe
