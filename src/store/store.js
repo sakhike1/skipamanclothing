@@ -52,6 +52,13 @@ export const store = new Vuex.Store({
             require('@/assets/skipa4.png'),
             // Add more image sources as needed
         ],
+
+        searchTerm: '',
+    images: [
+      { id: 1, url: 'image1.jpg' },
+      { id: 2, url: 'image2.jpg' },
+      { id: 3, url: 'image3.jpg' }
+    ]
     },
     mutations: {
         increment(state) {
@@ -87,7 +94,10 @@ export const store = new Vuex.Store({
                         state.cartItemCount--
                 }
             }
-        }
+        },
+        updateSearchTerm(state, term) {
+            state.searchTerm = term;
+          }
     },
     actions: {
         addToCart: (context, item) => {
@@ -105,7 +115,10 @@ export const store = new Vuex.Store({
     getters: {
         doneTodos: state => {
             return state.todos.filter(todo => todo.done)
-        }
+        },
+        filteredImages: (state) => {
+            return state.images.filter(image => image.url.includes(state.searchTerm));
+          }
     }
 });
 

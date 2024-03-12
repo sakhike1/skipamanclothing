@@ -14,10 +14,10 @@
                     </h2>
                     <p class="mb-6 max-w-[480px] text-[#636262] md:mb-10 lg:mb-12">you might have a specific design in
                         mind send us your idea so we can implement it </p>
-                    <a href="#"
+                    <router-link to="/ContactPage"
                         class="inline-block hover:scale-125 rounded-xl bg-black px-8 py-4 text-center font-semibold text-white hover:text-blue-700 [box-shadow:rgb(19,_83,_254)_6px_6px]">
                         Get Started
-                    </a>
+                    </router-link>
                 </div>
                 <!-- Image Div -->
                 <div id="floating-container"
