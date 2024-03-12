@@ -13,7 +13,7 @@
                     <router-link to="/SalesNow" class="text-red-400 text-xs hover:text-gray-500">SALE</router-link>
                 </div>
                 <div class="ml-5 flex w-full lg:w-auto items-center justify-between">
-                    <input type="search" v-model="searchQuery" @input="filterItems"
+                    <input type="search" v-model="searchQuery" @input="filterItems" 
                         class="relative m-0 block w-full lg:w-96 min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] motion-reduce:transition-none dark:border-neutral-500 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                         placeholder="What are you looking for ?" aria-label="Search" aria-describedby="button-addon2" />
                     <!-- Search icon -->
@@ -34,32 +34,24 @@
 
 <script>
 export default {
+    props: {
+        items: {
+            type: Array,
+            required: true
+        }
+    },
     data() {
         return {
             searchQuery: '',
-            items: [], // Your items array goes here
-            filteredItems: [] // Initialize an array to hold filtered items
+            filteredItems: []
         };
     },
     methods: {
         filterItems() {
-            // Reset filteredItems array
-            this.filteredItems = [];
-
-            // Filter items based on searchQuery
-            if (this.searchQuery.trim() !== '') {
-                this.filteredItems = this.items.filter(item => {
-                    // Adjust this condition as per your item structure
-                    return item.toLowerCase().includes(this.searchQuery.toLowerCase());
-                });
-            } else {
-                this.filteredItems = [...this.items]; // If searchQuery is empty, show all items
-            }
+            this.filteredItems = this.items.filter(item => {
+                return item.name.toLowerCase().includes(this.searchQuery.toLowerCase());
+            });
         }
-    },
-    mounted() {
-        // Initialize filteredItems with all items initially
-        this.filteredItems = [...this.items];
     }
 };
 </script>

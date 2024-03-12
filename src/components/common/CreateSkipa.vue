@@ -15,7 +15,7 @@
                     <p class="mb-6 max-w-[480px] text-[#636262] md:mb-10 lg:mb-12">you might have a specific design in
                         mind send us your idea so we can implement it </p>
                     <a href="#"
-                        class="inline-block rounded-xl bg-black px-8 py-4 text-center font-semibold text-white hover:text-orange-700 [box-shadow:rgb(19,_83,_254)_6px_6px]">
+                        class="inline-block hover:scale-125 rounded-xl bg-black px-8 py-4 text-center font-semibold text-white hover:text-blue-700 [box-shadow:rgb(19,_83,_254)_6px_6px]">
                         Get Started
                     </a>
                 </div>
