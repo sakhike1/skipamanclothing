@@ -1,5 +1,5 @@
 <template>
-    <section  class="bg-gradient-to-r from-rose-500 via-red-400 to-red-500">
+    <section  class="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700">
         <!-- Contact Container -->
         <div class="mx-auto w-full max-w-7xl px-5 py-2 md:px-10 md:py-24 lg:py-32">
           <!-- Component -->
@@ -12,10 +12,10 @@
               
             </div>
             <!-- Contact Form Container -->
-            <div class="mx-auto max-w-xl bg-gradient-to-r from-violet-300 to-violet-400 p-8 text-center">
+            <div class="mx-auto max-w-xl bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-orange-900 via-amber-100 to-orange-900 p-8 text-center">
               <!-- Contact Form Title -->
               <h3 class="text-2xl font-bold md:text-3xl">Send us your design request</h3>
-              <p class="mx-auto mb-2 p-5 mt-4 max-w-md text-left text-sm text-[#e9e2e2]">We are very excited you considering working with us we work very fast and we are reliable to our clients </p>
+              <p class="mx-auto mb-2 p-5 mt-4 max-w-md text-left text-sm text-[#4b4848]">We are very excited you considering working with us we work very fast and we are reliable to our clients </p>
               <!-- Contact Form -->
               <form class="mx-auto mb-4 max-w-sm text-left" name="wf-form-password" method="get">
                 <div class="mb-4 flex flex-col gap-y-2">
