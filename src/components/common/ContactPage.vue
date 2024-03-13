@@ -40,7 +40,7 @@
       </svg>
       <p class="text-gray-400 font-semibold text-sm">Drag & Drop or <span class="text-[#007bff]">Choose file</span> to
         upload</p>
-      <input type="file" id='uploadFile1' class="hidden" />
+      <input type="file" id='uploadFile1' class="hidden" onchange="handleFileUpload(event)" />
       <p class="text-xs text-gray-400 mt-2">PNG, JPG SVG, WEBP, and GIF are Allowed.</p>
     </label>
 </div>
@@ -78,7 +78,10 @@ export default {
 
         changeTextColor();
     }
+    
 }
+
+
 </script>
 
 <style lang="scss" scoped>

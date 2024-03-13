@@ -9,7 +9,7 @@
         </nav>
         <nav>
             <h6 class="footer-title">Company</h6>
-            <a class="link link-hover">About us</a>
+            <router-link to="AboutUs" class="link link-hover">About us</router-link>
             <router-link to="/ContactPage" class="link link-hover">Contact</router-link>
 
         </nav>

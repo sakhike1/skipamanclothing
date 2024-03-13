@@ -12,6 +12,8 @@ import AmazazaView from  '../components/common/AmazazaView.vue';
 import SalesNow  from   '../components/common/SalesNow.vue';
 import CreateSkipa from '../components/common/CreateSkipa.vue';
 import ContactPage from '../components/common/ContactPage.vue';
+import AboutUs from '../components/common/AboutUs.vue';
+
 
 
 Vue.use(VueRouter);
@@ -32,7 +34,8 @@ const routes = [
   {path: '/AmazazaView', component: AmazazaView},
   {path: '/SalesNow', component: SalesNow},
   {path: '/CreateSkipa', component: CreateSkipa},
-  {path: '/ContactPage', component: ContactPage}
+  {path: '/ContactPage', component: ContactPage},
+  {path: '/AboutUs', component: AboutUs}
 ];
 
 const router = new VueRouter({

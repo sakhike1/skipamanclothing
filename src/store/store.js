@@ -58,7 +58,12 @@ export const store = new Vuex.Store({
       { id: 1, url: 'image1.jpg' },
       { id: 2, url: 'image2.jpg' },
       { id: 3, url: 'image3.jpg' }
-    ]
+    ],
+    aboutImage: [
+        require('@/assets/AboutImage1.png'),
+        require('@/assets/AboutImage2.png'),
+        require('@/assets/AboutImage3.png'),
+    ],
     },
     mutations: {
         increment(state) {
