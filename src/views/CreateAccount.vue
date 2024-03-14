@@ -1,9 +1,9 @@
 <template>
     <!-- component -->
-    <div class="flex h-screen w-full items-center justify-center ">
+    <div class="flex   sm:p-10  h-screen  w-full items-center justify-center ">
 
         <div data-aos="fade-up" data-aos-duration="3000"
-            class="flex flex-col w-[100rem] max-w-md px-4 py-8 bg-gradient-to-r from-rose-50 to-teal-50 rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
+            class="flex   flex-col w-[100rem]  max-w-md px-4 py-8 bg-gradient-to-r from-rose-50 to-teal-50 rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
             <div class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
                 Create account
             </div>
@@ -175,6 +175,13 @@ export default {
 
     100% {
         background-position: 0 0;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .flex {
+       
     }
 }
 </style>

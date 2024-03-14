@@ -13,6 +13,7 @@ import SalesNow  from   '../components/common/SalesNow.vue';
 import CreateSkipa from '../components/common/CreateSkipa.vue';
 import ContactPage from '../components/common/ContactPage.vue';
 import AboutUs from '../components/common/AboutUs.vue';
+import TermsOfService from '../components/common/TermsOfService.vue';
 
 
 
@@ -35,7 +36,8 @@ const routes = [
   {path: '/SalesNow', component: SalesNow},
   {path: '/CreateSkipa', component: CreateSkipa},
   {path: '/ContactPage', component: ContactPage},
-  {path: '/AboutUs', component: AboutUs}
+  {path: '/AboutUs', component: AboutUs},
+  {path: '/TermsOfService', component: TermsOfService}
 ];
 
 const router = new VueRouter({

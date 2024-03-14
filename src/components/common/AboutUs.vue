@@ -7,7 +7,7 @@
               <!-- Title -->
 
               <div class="grid gap-10  lg:grid-cols-2 lg:gap-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" >
-                <img rel="preload" class="w-[500px] hover:scale-90 rounded-lg h-[500px] m-20 object-contain max-w-full bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 max-h-full "
+                <img rel="preload" class="w-[500px] shadow-2xl hover:scale-90 rounded-lg h-[500px] m-20 object-contain max-w-full bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 max-h-full "
                 :src="currentImage" />
                 <div class="flex flex-col hover:scale-90 transform-gpu bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-orange-200 to-yellow-600 gap-5 rounded-lg  shadow-2xl   p-10 sm:p-20">
                   <h2 class="text-3xl font-bold md:text-5xl">Our Mission</h2>

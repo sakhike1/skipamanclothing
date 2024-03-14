@@ -3,8 +3,8 @@
         <PopUp />
         <nav>
             <h6 class="footer-title">Services</h6>
-            <a class="link link-hover">Branding</a>
-            <a class="link link-hover">Design</a>
+            <router-link to="/AboutUs" class="link link-hover">Clothing services</router-link>
+            <router-link to="/" class="link link-hover">Services</router-link>
 
         </nav>
         <nav>
@@ -15,8 +15,8 @@
         </nav>
         <nav>
             <h6 class="footer-title">Legal</h6>
-            <a class="link link-hover">Terms of use</a>
-            <a class="link link-hover">Privacy policy</a>
+            <router-Link to="/TermsOfService" class="link link-hover">Terms of use</router-Link>
+            
 
         </nav>
         <aside class="items-center grid-flow-col">
