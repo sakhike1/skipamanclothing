@@ -4,13 +4,13 @@
       <video autoplay muted loop class="video-bg">
         <source :src="videoSrc" type="video/mp4">
       </video>
-      <div data-aos="fade-up" data-aos-duration="3000" class="mx-4 sm:px-10 lg:px-20 xl:px-40">
+      <div data-aos="fade-up" data-aos-duration="3000" class="flex justify-center items-center p-8">
         <div class="z-10 max-w-3xl p-6 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 md:p-16 opacity-80">
           <div class="text-center">
-            <h2 class="mb-6 text-3xl font-medium leading-10 tracking-tight text-gray-50 md:text-3xl">
+            <h2 class="mb-6 text-3xl font-medium sm:text-lg leading-10 tracking-tight text-gray-50 md:text-3xl">
               Looks like you do not have <br> any item in your cart
             </h2>
-            <p class="mb-6 tracking-wide text-gray-300 sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5">
+            <p class="mb-6 tracking-wide text-gray-300  sm:text-sm sm:max-w-xl sm:mx-auto md:mt-5">
               Subscribe to our email list to receive notifications on new arrivals
             </p>
             <div class="flex flex-wrap justify-center items-center">

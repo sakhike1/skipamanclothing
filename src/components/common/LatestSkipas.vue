@@ -8,7 +8,7 @@
             <div class="flex flex-col w-[85%] md:flex-row mx-auto">
                 <div :style="{ background: color }"
                     class="p-4 sm:p-8 lg:p-16  md:w-56 lg:w-48 flex-grow order-last md:order-first">
-                    <div id="skipaman" class="text-center md:w pt-7 sm:text-left rtl:sm:text-right">
+                    <div id="skipaman" class="text-left md:w pt-7 sm:text-left rtl:sm:text-right">
                         <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-black">
                             Latest skipas
                         </h2>
@@ -18,7 +18,7 @@
                         </p>
                         <div class="mt-4  sm:mt-8">
                             <router-link to="/AllTshirt" @click="randomColor"
-                                class="inline-block md:w-56 rounded-full bg-green border hover:bg-opacity-0  hover:bg-gray-50 border-gray-900 text-white   px-4 sm:px-12 py-3 text-sm font-medium hover:text-black bg-black transition  ">
+                                class="inline-block md:w-56 text-center rounded-full bg-green border hover:bg-opacity-0  hover:bg-gray-50 border-gray-900 text-white   px-4 sm:px-12 py-3 text-sm font-medium hover:text-black bg-black transition  ">
                                 Get your cool now!
                             </router-link>
                         </div>
