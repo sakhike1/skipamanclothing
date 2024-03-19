@@ -1,20 +1,32 @@
 <template>
   <div ref="container" class="keen-slider" style="height: 500px">
-    <div id="keen-slider__slide" class="keen-slider__slide number-slide2">
-      <img id="image1" class="object-contain h-full w-full  bg-gradient-to-r from-rose-400 to-orange-300"
-        :src="require('@/assets/image51.png')" />
+    <div id="keen-slider__slide6" class="keen-slider__slide number-slide2">
+      <img
+        id="image1"
+        class="object-contain h-full w-full bg-gradient-to-r from-rose-400 to-orange-300"
+        :src="require('@/assets/image51.png')"
+      />
     </div>
     <div id="keen-slider__slide2" class="keen-slider__slide number-slide3">
-      <img id="image2" class="object-contain h-full w-full   bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"
-        :src="require('@/assets/image53.png')" />
+      <img
+        id="image2"
+        class="object-contain h-full w-full bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"
+        :src="require('@/assets/image53.png')"
+      />
     </div>
     <div id="keen-slider__slide3" class="keen-slider__slide number-slide4">
-      <img id="image3" class="object-contain h-full w-full bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400"
-        :src="require('@/assets/image55.png')" />
+      <img
+        id="image3"
+        class="object-contain h-full w-full bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400"
+        :src="require('@/assets/image55.png')"
+      />
     </div>
     <div id="keen-slider__slide4" class="keen-slider__slide number-slide5">
-      <img id="image4" class="object-contain h-full w-full   bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400"
-        :src="require('@/assets/image54.png')" />
+      <img
+        id="image4"
+        class="object-contain h-full w-full bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400"
+        :src="require('@/assets/image54.png')"
+      />
     </div>
   </div>
 </template>
@@ -67,65 +79,77 @@ body {
   border-style: none;
 }
 
-.number-slide1 {}
+.number-slide1 {
+}
 
-.number-slide2 {}
+.number-slide2 {
+}
 
+.number-slide3 {
+}
 
+.number-slide4 {
+}
 
-.number-slide3 {}
+.number-slide5 {
+}
 
-
-
-.number-slide4 {}
-
-.number-slide5 {}
-
-.number-slide6 {}
-
-
-
+.number-slide6 {
+}
 
 @media only screen and (min-width: 380px) and (max-width: 911px) {
   /* Styles for screens between 600px and 1200px wide */
-  #keen-slider__slide #image1 {
-  object-fit: contain;
-  height: 500px;
- 
+  #keen-slider__slide img {
+    object-fit: cover;
+    height: 500px;
   }
 }
-
-
 
 @media only screen and (min-width: 380px) and (max-width: 911px) {
   /* Styles for screens between 600px and 1200px wide */
   #keen-slider__slide2 #image2 {
-  object-fit: contain;
-  height: 500px;
- 
+    object-fit: contain;
+    height: 500px;
   }
 }
-
 
 @media only screen and (min-width: 380px) and (max-width: 911px) {
   /* Styles for screens between 600px and 1200px wide */
   #image {
-  height: 600px;
-  object-fit: contain;
- 
+    height: 600px;
+    object-fit: contain;
   }
 }
-
 
 @media only screen and (min-width: 380px) and (max-width: 911px) {
   /* Styles for screens between 600px and 1200px wide */
-  #image4 {
-  
-  height: 500px;
- 
+  #keen-slider__slide3 img {
+    height: 500px;
+    object-fit: cover;
   }
 }
 
+@media only screen and (min-width: 380px) and (max-width: 911px) {
+  /* Styles for screens between 600px and 1200px wide */
+  #keen-slider__slide6 img {
+    height: 500px;
+    object-fit: contain;
+  }
+}
 
+@media only screen and (min-width: 280px) and (max-width: 380px) {
+  /* Styles for screens between 600px and 1200px wide */
+  #keen-slider__slide6 img {
+    height: 500px;
+    object-fit: contain;
+  }
+}
 
+@media only screen and (min-width: 380px) and (max-width: 911px) {
+  /* Styles for screens between 600px and 1200px wide */
+  #keen-slider__slide4 img {
+    height: 500px;
+    object-fit: contain;
+  }
+}
 </style>
