@@ -63,7 +63,7 @@
               />
             </div>
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col mb-6">
             <div class="flex relative">
               <span
                 class="rounded-l-md inline-flex items-center px-3 border-t bg-white border-l border-b border-gray-300 text-gray-500 shadow-sm text-sm"
@@ -84,7 +84,7 @@
                 type="password"
                 id="sign-in-email"
                 class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                placeholder="confirm password"
+                placeholder="Confirm password"
               />
             </div>
           </div>
