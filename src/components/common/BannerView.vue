@@ -24,8 +24,7 @@ export default {
       buttonText: "Shop Now",
       gradients: [
         "conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60))",
-        "linear-gradient(to right, rgb(96, 165, 250), rgb(52, 211, 153))",
-        "linear-gradient(to top, rgb(251, 146, 60), rgb(56, 189, 248));",
+
         "linear-gradient(to right, rgb(254, 240, 138), rgb(251, 207, 232), rgb(244, 114, 182))",
         // Add more gradient color combinations as needed
       ],
