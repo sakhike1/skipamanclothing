@@ -2,10 +2,7 @@
   <div>
     <div ref="slider" class="keen-slider h-[500px]">
       <div id="keen-slider__slide1" class="keen-slider__slide number-slide1">
-        <img
-          class="object-contain h-full w-full bg-gradient-to-tr from-violet-500 to-orange-300"
-          :src="require('@/assets/sales1.png')"
-        />
+        <img class="object-contain h-full w-full" :src="require('@/assets/sales1.png')" />
       </div>
       <div id="keen-slider__slide2" class="keen-slider__slide number-slide2">
         <img
@@ -153,21 +150,10 @@ export default {
 }
 
 .number-slide1 {
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
+  background-image: linear-gradient(to right top, rgb(139, 92, 246), rgb(253, 186, 116));
 }
 
 .number-slide2 {
-  background: rgb(255, 75, 64);
-  background: linear-gradient(
-    128deg,
-    rgba(255, 154, 63, 1) 0%,
-    rgba(255, 75, 64, 1) 100%
-  );
 }
 
 .number-slide3 {
@@ -223,19 +209,13 @@ export default {
 
 @media only screen and (min-width: 380px) and (max-width: 911px) {
   /* Styles for screens between 600px and 1200px wide */
-  #keen-slider__slide1 img {
-    object-fit: contain;
-    height: 500px;
-  }
-}
-
-@media only screen and (min-width: 380px) and (max-width: 911px) {
-  /* Styles for screens between 600px and 1200px wide */
+  #keen-slider__slide1,
   #keen-slider__slide2 img {
     object-fit: contain;
     height: 500px;
   }
 }
+
 @media only screen and (min-width: 380px) and (max-width: 911px) {
   /* Styles for screens between 600px and 1200px wide */
   #keen-slider__slide3 img {
