@@ -11,7 +11,7 @@
         v-on:click="foodDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
       >
         <img
           :src="items.url"
@@ -41,7 +41,7 @@
           <StarRating />
           <button v-on:click="foodDetails(items)">
             <button
-              class="relative items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
+              class="relative w-40 items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
             >
               <span
                 class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
@@ -51,7 +51,7 @@
               ></span>
               <span
                 class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
-                >View Products
+                >Product
               </span>
               <span
                 class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"
@@ -66,7 +66,7 @@
         v-on:click="foodDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
       >
         <div></div>
         <a href="#">
@@ -97,7 +97,7 @@
             <StarRating />
             <button v-on:click="foodDetails(items)">
               <button
-                class="relative items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
+                class="relative w-40 items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
               >
                 <span
                   class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
@@ -107,7 +107,7 @@
                 ></span>
                 <span
                   class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
-                  >View Products
+                  >Product
                 </span>
                 <span
                   class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"
@@ -124,7 +124,7 @@
         v-on:click="foodDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
       >
         <a href="#">
           <img
@@ -154,7 +154,7 @@
             <StarRating />
             <button v-on:click="foodDetails(items)">
               <button
-                class="relative items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
+                class="relative items-center w-40 justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
               >
                 <span
                   class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
@@ -164,7 +164,7 @@
                 ></span>
                 <span
                   class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
-                  >View Products
+                  >Product
                 </span>
                 <span
                   class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"
@@ -181,7 +181,7 @@
         v-on:click="foodDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="w-73 bg-gradient-to-r from-rose-100 to-teal-100 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
       >
         <a href="#">
           <img
@@ -209,7 +209,7 @@
             <star-rating />
             <button v-on:click="foodDetails(items)">
               <button
-                class="relative items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
+                class="relative w-40 items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
               >
                 <span
                   class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
@@ -219,7 +219,7 @@
                 ></span>
                 <span
                   class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
-                  >View Products
+                  >Product
                 </span>
                 <span
                   class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"

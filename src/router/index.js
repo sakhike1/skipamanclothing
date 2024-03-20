@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HomeFace from '../views/HomeFace.vue';
-import FoodDetails from '../components/FoodDetails'
+import ItemsDetails from '../components/ItemsDetails.vue';
 import Cart from '../components/Cart';
-import ClientLogin  from "../components/common/ClientLogin.vue"
+import ClientLogin  from "../components/common/ClientLogin.vue";
 import LatestArrival from "../components/common/LatestArrival.vue";
 import CreateAccount from "../views/CreateAccount.vue"
 import AllTshirt from '../components/common/AllTshirt.vue';
@@ -25,7 +25,7 @@ const routes = [
     name: 'HomeFace',
     component: HomeFace
   },
-  { path: '/food-details', name: 'food-details', component: FoodDetails },
+  { path: '/Items-details', name: 'Items-details', component: ItemsDetails },
   { path: '/cart', component: Cart },
   { path: '/LatestArrivals', component: LatestArrival },
   {path: '/ClientLogin', component: ClientLogin},

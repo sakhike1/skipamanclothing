@@ -125,5 +125,6 @@ export const store = new Vuex.Store({
             return state.images.filter(image => image.url.includes(state.searchTerm));
           }
     }
+    
 });
 

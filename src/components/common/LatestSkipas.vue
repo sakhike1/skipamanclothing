@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div
-                    class="bg-gradient-to-r from-gray-400 via-gray-600 flex items-center justify-center  to-blue-800 md:w-[400px]">
+                    class="bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r flex items-center justify-center   md:w-[400px]">
                     <img rel="preload" class="w-[350px] h-[350px] object-cover max-w-full max-h-full "
                         :src="currentImage" />
                 </div>
@@ -59,7 +59,7 @@ export default {
             currentImageIndex: 0,
             autoPlayTimer: null,
             currentImage: '',
-            color: 'linear-gradient(to right, rgb(192, 132, 252), rgb(250, 204, 21))',
+            color: 'linear-gradient(to right, rgb(156, 163, 175), rgb(75, 85, 99), rgb(30, 64, 175))',
         };
     },
     methods: {
@@ -77,13 +77,11 @@ export default {
 
         randomColor() {
             const gradients = [
-                'linear-gradient(to right, rgb(254, 240, 138), rgb(187, 247, 208), rgb(134, 239, 172))',
-                'linear-gradient(to right, rgb(192, 132, 252), rgb(250, 204, 21))',
-                'linear-gradient(to right, rgb(192, 132, 252), rgb(250, 204, 21))',
-                'linear-gradient(to right, rgb(123, 104, 238), rgb(255, 69, 0))', // Add more gradients as needed
-                'linear-gradient(to right, rgb(59, 130, 246), rgb(37, 99, 235))',
-                'linear-gradient(to right, rgb(101, 163, 13), rgb(253, 224, 71), rgb(220, 38, 38))',
-                'linear-gradient(to right, rgb(255, 228, 230), rgb(204, 251, 241))'
+                
+                'linear-gradient(to right, rgb(100, 116, 139), rgb(254, 249, 195))',
+                'conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60))',
+                'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900',
+                
 
             ];
             this.color = gradients[Math.floor(Math.random() * gradients.length)];
