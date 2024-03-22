@@ -8,7 +8,7 @@
       <div
         v-for="items in topRated"
         :key="items.id"
-        v-on:click="foodDetails(items)"
+        v-on:click="ItemsDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
         class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
@@ -39,7 +39,7 @@
             <p class="text-lg font-semibold text-green-400 cursor-auto my-3">R199</p>
           </div>
           <StarRating />
-          <button v-on:click="foodDetails(items)">
+          <button v-on:click="ItemsDetails(items)">
             <button
               class="relative w-40 items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
             >
@@ -47,7 +47,7 @@
                 class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
               ></span>
               <span
-                class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 opacity-50 group-hover:-translate-x-8"
+                class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"
               ></span>
               <span
                 class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
@@ -63,7 +63,7 @@
       <div
         v-for="items in allCategories"
         :key="items.id"
-        v-on:click="foodDetails(items)"
+        v-on:click="ItemsDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
         class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
@@ -95,7 +95,7 @@
               <p class="text-lg font-semibold text-green-400 cursor-auto my-3">R199</p>
             </div>
             <StarRating />
-            <button v-on:click="foodDetails(items)">
+            <button v-on:click="ItemsDetails(items)">
               <button
                 class="relative w-40 items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
               >
@@ -103,7 +103,7 @@
                   class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
                 ></span>
                 <span
-                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 opacity-50 group-hover:-translate-x-8"
+                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"
                 ></span>
                 <span
                   class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
@@ -121,7 +121,7 @@
       <div
         v-for="items in dishesNearYou"
         :key="items.id"
-        v-on:click="foodDetails(items)"
+        v-on:click="ItemsDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
         class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
@@ -152,7 +152,7 @@
               <p class="text-lg font-semibold text-green-400 cursor-auto my-3">R199</p>
             </div>
             <StarRating />
-            <button v-on:click="foodDetails(items)">
+            <button v-on:click="ItemsDetails(items)">
               <button
                 class="relative items-center w-40 justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
               >
@@ -160,7 +160,7 @@
                   class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
                 ></span>
                 <span
-                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 opacity-50 group-hover:-translate-x-8"
+                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"
                 ></span>
                 <span
                   class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
@@ -178,7 +178,7 @@
       <div
         v-for="items in allCategories"
         :key="items.id"
-        v-on:click="foodDetails(items)"
+        v-on:click="ItemsDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
         class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
@@ -207,7 +207,7 @@
               <p class="text-lg font-semibold text-green-400 cursor-auto my-3">R199</p>
             </div>
             <star-rating />
-            <button v-on:click="foodDetails(items)">
+            <button v-on:click="ItemsDetails(items)">
               <button
                 class="relative w-40 items-center justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
               >
@@ -215,7 +215,7 @@
                   class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
                 ></span>
                 <span
-                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 opacity-50 group-hover:-translate-x-8"
+                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"
                 ></span>
                 <span
                   class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
@@ -261,8 +261,8 @@ export default {
     },
   },
   methods: {
-    foodDetails(items) {
-      this.$router.push({ name: "food-details", params: items });
+    ItemsDetails(items) {
+      this.$router.push({ name: "Items-details", params: items });
     },
   },
 };

@@ -17,7 +17,7 @@
           <div class="flex -mx-2 mb-4">
             <div class="w-full md:w-1/2 px-2 mb-2 md:mb-0">
               <button
-                v-on:click="goToCart"
+                @click="goToCart"
                 class="w-full hover:scale-105 bg-gradient-to-b from-gray-900 to-gray-600 dark:bg-gray-600 text-white py-2 px-4 rounded-full hover:bg-gray-800 dark:hover:bg-gray-700"
               >
                 View cart items
@@ -25,7 +25,7 @@
             </div>
             <div class="w-1/2 px-2">
               <button
-                v-on:click="addToCart"
+                @click="addToCart"
                 class="w-full hover:scale-105 bg-gradient-to-b from-gray-900 to-gray-600 dark:bg-gray-700 text-white dark:text-white py-2 px-4 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600"
               >
                 Add items
@@ -33,7 +33,7 @@
             </div>
             <div class="w-1/2 px-2">
               <button
-                v-on:click="removeItem"
+                @click="removeItem"
                 class="w-full hover:scale-105 bg-gradient-to-b from-gray-900 to-gray-600 dark:bg-gray-700 text-white dark:text-white py-2 px-4 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600"
               >
                 Remove Item
@@ -50,13 +50,13 @@
           </p>
           <div class="flex mb-4">
             <div class="mr-4">
-              <span class="font-bold text-gray-700 dark:text-gray-300"
-                >R{{ details.price }}</span
-              >
+              <span class="font-bold text-gray-700 dark:text-gray-300">
+                R{{ details.price }}
+              </span>
             </div>
             <div>
-              <span class="font-bold text-gray-700 dark:text-gray-300"
-                >Availability
+              <span class="font-bold text-gray-700 dark:text-gray-300">
+                Availability
               </span>
               <span class="text-gray-600 dark:text-gray-300">in Stock</span>
             </div>
@@ -66,15 +66,19 @@
             <div class="flex items-center mt-2">
               <button
                 class="w-6 h-6 rounded-full bg-gray-800 dark:bg-gray-200 mr-2"
+                @click="selectColor('black')"
               ></button>
               <button
                 class="w-6 h-6 rounded-full bg-red-500 dark:bg-red-700 mr-2"
+                @click="selectColor('red')"
               ></button>
               <button
                 class="w-6 h-6 rounded-full bg-blue-500 dark:bg-blue-700 mr-2"
+                @click="selectColor('blue')"
               ></button>
               <button
                 class="w-6 h-6 rounded-full bg-yellow-500 dark:bg-yellow-700 mr-2"
+                @click="selectColor('yellow')"
               ></button>
             </div>
           </div>
@@ -82,36 +86,66 @@
             <span class="font-bold text-gray-700 dark:text-gray-300">Select Size:</span>
             <div class="flex items-center mt-2">
               <button
-                class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                :class="{
+                  'bg-blue-500 text-white': selectedSize === 'S',
+                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
+                    selectedSize !== 'S',
+                }"
+                @click="selectSize('S')"
+                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
               >
                 S
               </button>
               <button
-                class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                :class="{
+                  'bg-blue-500 text-white': selectedSize === 'M',
+                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
+                    selectedSize !== 'M',
+                }"
+                @click="selectSize('M')"
+                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
               >
                 M
               </button>
               <button
-                class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                :class="{
+                  'bg-blue-500 text-white': selectedSize === 'L',
+                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
+                    selectedSize !== 'L',
+                }"
+                @click="selectSize('L')"
+                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
               >
                 L
               </button>
               <button
-                class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                :class="{
+                  'bg-blue-500 text-white': selectedSize === 'XL',
+                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
+                    selectedSize !== 'XL',
+                }"
+                @click="selectSize('XL')"
+                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
               >
                 XL
               </button>
               <button
-                class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                :class="{
+                  'bg-blue-500 text-white': selectedSize === 'XXL',
+                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
+                    selectedSize !== 'XXL',
+                }"
+                @click="selectSize('XXL')"
+                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
               >
                 XXL
               </button>
             </div>
           </div>
           <div>
-            <span class="font-bold text-gray-700 dark:text-gray-300"
-              >Product Description:</span
-            >
+            <span class="font-bold text-gray-700 dark:text-gray-300">
+              Product Description:
+            </span>
             <p class="text-gray-600 dark:text-gray-300 text-xs mt-2">
               Made to withstand the test of time, Skipaman T-shirts boast a superior
               craftsmanship that sets them apart from the rest. Whether you're dressing up
@@ -138,6 +172,9 @@ export default {
     count() {
       return this.$store.state.count;
     },
+    selectedSize() {
+      return this.$store.state.selectedSize;
+    },
   },
   methods: {
     goToCart() {
@@ -151,6 +188,9 @@ export default {
     removeItem() {
       // this.$store.commit("removeItem");
       this.$store.dispatch("removeItem", this.details);
+    },
+    selectSize(size) {
+      this.$store.commit("updateSelectedSize", size);
     },
   },
   created() {
@@ -186,5 +226,20 @@ export default {
     margin-bottom: 0;
     /* Reset margin for medium screens and above */
   }
+}
+
+.size-button {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 8px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.size-button.active {
+  background-color: #007bff;
+  color: #fff;
 }
 </style>

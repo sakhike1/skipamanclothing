@@ -1,5 +1,5 @@
 <template>
-  <div ref="slider" class="keen-slider" style="height: 500px">
+  <div ref="slider" class="keen-slider" style="height: 600px">
     <div id="keen-slider__slide1" class="keen-slider__slide number-slide1">
       <img class="object-contain h-full w-full" :src="require('@/assets/zaza18.png')" />
     </div>

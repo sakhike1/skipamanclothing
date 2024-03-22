@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="keen-slider" style="height: 500px">
+  <div ref="container" class="keen-slider" style="height: 550px">
     <div id="keen-slider__slide1" class="keen-slider__slide number-slide2">
       <img
         class="object-contain h-full w-full bg-gradient-to-r from-slate-500 to-yellow-100"
