@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gradient-to-r from-orange-400 to-rose-400">
+  <section class="bg-gradient-to-r from-yellow-200 via-pink-400 to-pink-100">
     <!-- Contact Container -->
     <div class="mx-auto max-w-7xl px-5 py-2 md:px-10 md:py-24 lg:py-32">
       <!-- Component -->

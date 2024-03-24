@@ -15,8 +15,13 @@ import tacos from '../assets/tacos.png'
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
-    state: {
+        state: {
+
         count: 0,
+        buttonColor: 'white',
+        selectedSize: null, // Initialize with null
+        isOpen: false,
+    
         topRated: [
             { id: 1, name: 'skipaman', price: 199, url: cake, desc: "our T-shirt are designed to last", rate: 4.1 },
             { id: 2, name: 'skipaman', price: 199, url: noodles, desc: 'Handcrafted by skipaman', rate: 4.1 },
@@ -35,7 +40,7 @@ export const store = new Vuex.Store({
             { id: 9, name: 'skipaman', price: 199, url: tacos, desc: "Awesome!!", rate: 4.4 }
         ],
 
-        
+
         cartItemCount: 0,
         cartItems: [],
         totalPrice: 0,
@@ -54,21 +59,23 @@ export const store = new Vuex.Store({
         ],
 
         searchTerm: '',
-    images: [
-      { id: 1, url: 'image1.jpg' },
-      { id: 2, url: 'image2.jpg' },
-      { id: 3, url: 'image3.jpg' }
-    ],
-    aboutImage: [
-        require('@/assets/AboutImage1.png'),
-        require('@/assets/AboutImage2.png'),
-        require('@/assets/AboutImage3.png'),
-    ],
+        images: [
+            { id: 1, url: 'image1.jpg' },
+            { id: 2, url: 'image2.jpg' },
+            { id: 3, url: 'image3.jpg' }
+        ],
+        aboutImage: [
+            require('@/assets/AboutImage1.png'),
+            require('@/assets/AboutImage2.png'),
+            require('@/assets/AboutImage3.png'),
+        ],
     },
+
     mutations: {
         increment(state) {
             state.count++
         },
+        
         addToCart(state, payload) {
             let item = payload;
             item = { ...item, quantity: 1 };
@@ -102,8 +109,20 @@ export const store = new Vuex.Store({
         },
         updateSearchTerm(state, term) {
             state.searchTerm = term;
-          }
+          },
+          setButtonColor(state, color) {
+            state.buttonColor = color;
+          },
+          setSelectedSize(state, size) {
+            state.selectedSize = size;
+            state.isOpen = false;
+          },
+          toggleDropdown(state) {
+            state.isOpen = !state.isOpen;
+          },
+          
     },
+    
     actions: {
         addToCart: (context, item) => {
             context.commit('addToCart', item)
@@ -116,6 +135,12 @@ export const store = new Vuex.Store({
                 context.commit('increment')
             }, 5000)
         },
+        toggleDropdown({ commit }) {
+            commit('toggleDropdown');
+          },
+          selectSize({ commit }, size) {
+            commit('selectSize', size);
+          }
     },
     getters: {
         doneTodos: state => {

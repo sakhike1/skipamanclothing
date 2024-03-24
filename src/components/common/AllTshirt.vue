@@ -1,6 +1,7 @@
 <template>
   <div class="allitems">
     <SalesText />
+    <buttonMenu />
     <section
       id="Projects"
       class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center p-20 justify-center gap-y-20 gap-x-14"
@@ -236,6 +237,7 @@
 <script>
 import StarRating from "@/components/common/StarRating.vue";
 import SalesText from "@/components/common/SalesText.vue";
+import buttonMenu from "@/components/common/buttonMenu.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -245,6 +247,7 @@ export default {
   components: {
     StarRating,
     SalesText,
+    buttonMenu,
   },
   computed: {
     topRated() {

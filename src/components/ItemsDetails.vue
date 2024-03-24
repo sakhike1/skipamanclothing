@@ -45,7 +45,7 @@
           <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">
             {{ details.name }}
           </h2>
-          <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+          <p class="text-gray-600 dark:text-gray-300 text-xs mb-4">
             {{ details.desc }}
           </p>
           <div class="flex mb-4">
@@ -82,67 +82,68 @@
               ></button>
             </div>
           </div>
-          <div class="mb-4">
-            <span class="font-bold text-gray-700 dark:text-gray-300">Select Size:</span>
-            <div class="flex items-center mt-2">
-              <button
-                :class="{
-                  'bg-blue-500 text-white': selectedSize === 'S',
-                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
-                    selectedSize !== 'S',
-                }"
-                @click="selectSize('S')"
-                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+          <div class="relative b-5 pr-20 inline-block text-left">
+            <button
+              @click="toggleDropdown"
+              class="inline-flex justify-center bg-gradient-to-r from-gray-700 via-gray-900 to-black items-center px-4 py-2 border border-transparent rounded-full shadow-sm text-xs font-medium text-white"
+            >
+              {{
+                $store.state.selectedSize ? $store.state.selectedSize : "Selected Size"
+              }}
+              <!-- Update this part to display the selected size -->
+              <svg
+                class="-mr-1 ml-2 h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
               >
-                S
-              </button>
-              <button
-                :class="{
-                  'bg-blue-500 text-white': selectedSize === 'M',
-                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
-                    selectedSize !== 'M',
-                }"
-                @click="selectSize('M')"
-                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
-              >
-                M
-              </button>
-              <button
-                :class="{
-                  'bg-blue-500 text-white': selectedSize === 'L',
-                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
-                    selectedSize !== 'L',
-                }"
-                @click="selectSize('L')"
-                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
-              >
-                L
-              </button>
-              <button
-                :class="{
-                  'bg-blue-500 text-white': selectedSize === 'XL',
-                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
-                    selectedSize !== 'XL',
-                }"
-                @click="selectSize('XL')"
-                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
-              >
-                XL
-              </button>
-              <button
-                :class="{
-                  'bg-blue-500 text-white': selectedSize === 'XXL',
-                  'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white':
-                    selectedSize !== 'XXL',
-                }"
-                @click="selectSize('XXL')"
-                class="py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
-              >
-                XXL
-              </button>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 12.59l-4.95-4.95a1.4 1.4 0 00-1.98 1.98l6.36 6.36a1.4 1.4 0 002 0l6.36-6.36a1.4 1.4 0 00-1.98-1.98L10 12.59z"
+                />
+              </svg>
+            </button>
+            <div
+              v-if="$store.state.isOpen"
+              @click="toggleDropdown"
+              class="origin-top-right p-2 absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gradient-to-r from-gray-700 via-gray-900 to-black ring-1 ring-black ring-opacity-5 focus:outline-none"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="options-menu"
+            >
+              <div class="py-1" role="none">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-xs text-gray-50 hover:text-bg-gradient-to-r from-indigo-200 via-red-100 to-yellow-100"
+                  role="menuitem"
+                  @click="selectSize('Small')"
+                  >{{
+                    $store.state.selectedSize ? $store.state.selectedSize : "Small"
+                  }}</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-xs text-gray-50 hover:text-bg-gradient-to-r from-indigo-200 via-red-100 to-yellow-100"
+                  role="menuitem"
+                  @click="selectSize('Medium')"
+                  >{{
+                    $store.state.selectedSize ? $store.state.selectedSize : "Medium"
+                  }}</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-xs text-gray-50 hover:text-bg-gradient-to-r from-indigo-200 via-red-100 to-yellow-100"
+                  role="menuitem"
+                  @click="selectSize('Large')"
+                  >{{
+                    $store.state.selectedSize ? $store.state.selectedSize : "Large"
+                  }}</a
+                >
+              </div>
             </div>
           </div>
-          <div>
+          <div class="pt-5">
             <span class="font-bold text-gray-700 dark:text-gray-300">
               Product Description:
             </span>
@@ -166,6 +167,7 @@ export default {
   data() {
     return {
       details: this.$route.params,
+      isOpen: false,
     };
   },
   computed: {
@@ -181,16 +183,17 @@ export default {
       this.$router.push("/cart");
     },
     addToCart() {
-      // this.$store.commit("addToCart");
       this.$store.dispatch("addToCart", this.details);
       console.log("this.$store", this.$store.state.cartItems);
     },
     removeItem() {
-      // this.$store.commit("removeItem");
       this.$store.dispatch("removeItem", this.details);
     },
     selectSize(size) {
-      this.$store.commit("updateSelectedSize", size);
+      this.$store.dispatch("selectSize", size);
+    },
+    toggleDropdown() {
+      this.$store.dispatch("toggleDropdown");
     },
   },
   created() {
@@ -230,7 +233,7 @@ export default {
 
 .size-button {
   background-color: #ddd;
-  color: #333;
+  color: #f7eeee;
   border: none;
   padding: 8px 16px;
   margin-right: 8px;

@@ -30,7 +30,6 @@
 <script>
 import { useKeenSlider } from "keen-slider/vue.es";
 import "keen-slider/keen-slider.min.css";
-
 const animation = { duration: 60000, easing: (t) => t };
 
 export default {
