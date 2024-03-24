@@ -87,9 +87,8 @@
               @click="toggleDropdown"
               class="inline-flex justify-center bg-gradient-to-r from-gray-700 via-gray-900 to-black items-center px-4 py-2 border border-transparent rounded-full shadow-sm text-xs font-medium text-white"
             >
-              {{
-                $store.state.selectedSize ? $store.state.selectedSize : "Selected Size"
-              }}
+              {{ selectedSize ? selectedSize : "Selected Size" }}
+
               <!-- Update this part to display the selected size -->
               <svg
                 class="-mr-1 ml-2 h-5 w-5"
@@ -118,27 +117,21 @@
                   class="block px-4 py-2 text-xs text-gray-50 hover:text-bg-gradient-to-r from-indigo-200 via-red-100 to-yellow-100"
                   role="menuitem"
                   @click="selectSize('Small')"
-                  >{{
-                    $store.state.selectedSize ? $store.state.selectedSize : "Small"
-                  }}</a
+                  >Small</a
                 >
                 <a
                   href="#"
                   class="block px-4 py-2 text-xs text-gray-50 hover:text-bg-gradient-to-r from-indigo-200 via-red-100 to-yellow-100"
                   role="menuitem"
                   @click="selectSize('Medium')"
-                  >{{
-                    $store.state.selectedSize ? $store.state.selectedSize : "Medium"
-                  }}</a
+                  >Medium</a
                 >
                 <a
                   href="#"
                   class="block px-4 py-2 text-xs text-gray-50 hover:text-bg-gradient-to-r from-indigo-200 via-red-100 to-yellow-100"
                   role="menuitem"
                   @click="selectSize('Large')"
-                  >{{
-                    $store.state.selectedSize ? $store.state.selectedSize : "Large"
-                  }}</a
+                  >Large</a
                 >
               </div>
             </div>
@@ -192,8 +185,8 @@ export default {
     selectSize(size) {
       this.$store.dispatch("selectSize", size);
     },
-    toggleDropdown() {
-      this.$store.dispatch("toggleDropdown");
+    toggleDropdown(size) {
+      this.$store.dispatch("toggleDropdown", size);
     },
   },
   created() {

@@ -19,7 +19,7 @@ export const store = new Vuex.Store({
 
         count: 0,
         buttonColor: 'white',
-        selectedSize: null, // Initialize with null
+        selectedSize: null,
         isOpen: false,
     
         topRated: [
@@ -44,11 +44,7 @@ export const store = new Vuex.Store({
         cartItemCount: 0,
         cartItems: [],
         totalPrice: 0,
-        todos: [
-            { id: 1, name: "Shopping at 7", done: true },
-            { id: 2, name: "Learn Vue", done: true },
-            { id: 3, name: "Gaming", done: false }
-        ],
+       
 
         imageSources: [
             require('@/assets/skipa1.png'),
@@ -120,7 +116,9 @@ export const store = new Vuex.Store({
           toggleDropdown(state) {
             state.isOpen = !state.isOpen;
           },
-          
+          setSize(state, size) {
+            state.selectedSize = size
+          }
     },
     
     actions: {
@@ -135,17 +133,15 @@ export const store = new Vuex.Store({
                 context.commit('increment')
             }, 5000)
         },
-        toggleDropdown({ commit }) {
-            commit('toggleDropdown');
+        toggleDropdown({ commit }, size) {
+            commit('toggleDropdown', size );
           },
           selectSize({ commit }, size) {
-            commit('selectSize', size);
-          }
+            commit('setSelectedSize', size);
+          },
     },
     getters: {
-        doneTodos: state => {
-            return state.todos.filter(todo => todo.done)
-        },
+        
         filteredImages: (state) => {
             return state.images.filter(image => image.url.includes(state.searchTerm));
           }
