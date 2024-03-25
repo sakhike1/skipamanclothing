@@ -106,7 +106,7 @@
             <div
               v-if="$store.state.isOpen"
               @click="toggleDropdown"
-              class="origin-top-right p-2 absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gradient-to-r from-gray-700 via-gray-900 to-black ring-1 ring-black ring-opacity-5 focus:outline-none"
+              class="origin-top-right p-2 absolute mr-[-15px] right-0 mt-4 w-[230px] rounded-md shadow-lg bg-gradient-to-r from-gray-700 via-gray-900 to-black ring-1 ring-black ring-opacity-5 focus:outline-none"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
@@ -116,21 +116,21 @@
                   href="#"
                   class="block px-4 py-2 text-xs text-gray-50 hover:text-bg-gradient-to-r from-indigo-200 via-red-100 to-yellow-100"
                   role="menuitem"
-                  @click="selectSize('Small')"
+                  @click="selectSize('Small size')"
                   >Small</a
                 >
                 <a
                   href="#"
                   class="block px-4 py-2 text-xs text-gray-50 hover:text-bg-gradient-to-r from-indigo-200 via-red-100 to-yellow-100"
                   role="menuitem"
-                  @click="selectSize('Medium')"
+                  @click="selectSize('Medium size')"
                   >Medium</a
                 >
                 <a
                   href="#"
                   class="block px-4 py-2 text-xs text-gray-50 hover:text-bg-gradient-to-r from-indigo-200 via-red-100 to-yellow-100"
                   role="menuitem"
-                  @click="selectSize('Large')"
+                  @click="selectSize('Large size')"
                   >Large</a
                 >
               </div>
