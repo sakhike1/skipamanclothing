@@ -4,7 +4,7 @@
     <div
       data-aos="fade-up"
       data-aos-duration="3000"
-      class="flex flex-col w-[100rem] max-w-md px-4 py-8 bg-gradient-to-r from-rose-50 to-teal-50 rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10"
+      class="flex flex-col w-[100rem] max-w-md px-4 py-8 bg-[#f2f2f798] shadow-2xl rounded-lg dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10"
     >
       <div
         class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white"
@@ -12,7 +12,7 @@
         Create account
       </div>
       <div class="mt-8">
-        <form action="#" autoComplete="off">
+        <form @submit.prevent="register">
           <div class="flex flex-col mb-2">
             <div class="flex relative">
               <span
@@ -31,6 +31,7 @@
                 </svg>
               </span>
               <input
+                v-model="name"
                 type="text"
                 id="sign-in-email"
                 class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
@@ -56,6 +57,7 @@
                 </svg>
               </span>
               <input
+                v-model="password"
                 type="password"
                 id="sign-in-email"
                 class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
@@ -84,7 +86,7 @@
                 type="password"
                 id="sign-in-email"
                 class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                placeholder="Your password"
+                placeholder="Confirm password"
               />
             </div>
           </div>

@@ -9,7 +9,8 @@
       <div
         v-for="items in cartItems"
         :key="items.id"
-        class="rounded-3xl bg-gradient-to-r from-rose-100 to-teal-100 transform transition duration-500 hover:scale-110 border-2 p-4 lg:p-8 grid grid-cols-12 mb-8 max-lg:max-w-lg max-lg:mx-auto gap-y-4"
+        :style="{ backgroundImage: currentGradient }"
+        class="rounded-3xl transform transition duration-500 hover:scale-110 border-2 p-4 lg:p-8 grid grid-cols-12 mb-8 max-lg:max-w-lg max-lg:mx-auto gap-y-4"
       >
         <div class="col-span-12 lg:col-span-2 img box">
           <img :src="items.url" class="max-lg:w-full lg:w-[180px]" />
@@ -50,7 +51,7 @@
               </svg>
             </button>
           </div>
-          <p class="font-normal text-xs leading-7 text-black mb-6">
+          <p class="font-normal text-xs leading-5 text-gray-700 mb-4">
             Skipaman T-shirts are crafted with precision and care, using 100% cotton
             materials to ensure durability and comfort that lasts Each T-shirt is
             meticulously designed to stand out, offering a unique blend of style and
@@ -105,9 +106,7 @@
                 </svg>
               </button>
             </div>
-            <h6
-              class="text-indigo-600 font-manrope font-bold text-2xl leading-9 text-right"
-            >
+            <h6 class="text-black font-manrope font-bold text-2xl leading-9 text-right">
               R199
             </h6>
           </div>
@@ -137,7 +136,9 @@
         <p class="font-normal text-xs leading-7 text-gray-500 text-center mb-5 mt-6">
           Shipping taxes, and discounts calculated at checkout
         </p>
+
         <button
+          @click="checkout"
           class="bg rounded-full py-4 px-6 text-black font-semibold text-lg w-full text-center transition-all duration-500 hover:bg-indigo-700"
         >
           Checkout
@@ -159,6 +160,14 @@ export default {
   data() {
     return {
       item: 0,
+      gradients: [
+        "conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60))",
+        "linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252))",
+        // Add more gradient color combinations as needed
+      ],
+      currentGradientIndex: 0,
+      intervalId: null,
+      intervalDuration: 7500, // Interval duration in milliseconds (7.5 seconds)
     };
   },
   methods: {
@@ -170,6 +179,23 @@ export default {
     },
     selectSize(size) {
       this.$store.dispatch("selectSize", size);
+    },
+    startBackgroundAnimation() {
+      this.intervalId = setInterval(() => {
+        this.currentGradientIndex =
+          (this.currentGradientIndex + 1) % this.gradients.length;
+      }, this.intervalDuration);
+    },
+    stopBackgroundAnimation() {
+      clearInterval(this.intervalId);
+    },
+    checkout: function () {
+      if (confirm("are you sure you want to purchase these products")) {
+        this.cart.items.forEach(function (item) {
+          item.product.inStock += item.quantity;
+        });
+        this.cart.items = [];
+      }
     },
   },
   computed: {
@@ -186,6 +212,17 @@ export default {
     selectedSize() {
       return this.$store.state.selectedSize;
     },
+    currentGradient() {
+      return this.gradients[this.currentGradientIndex];
+    },
+  },
+  mounted() {
+    // Start background animation when the component is mounted
+    this.startBackgroundAnimation();
+  },
+  beforeDestroy() {
+    // Stop background animation when the component is destroyed
+    this.stopBackgroundAnimation();
   },
 };
 </script>

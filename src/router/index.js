@@ -14,6 +14,7 @@ import CreateSkipa from '../components/common/CreateSkipa.vue';
 import ContactPage from '../components/common/ContactPage.vue';
 import AboutUs from '../components/common/AboutUs.vue';
 import TermsOfService from '../components/common/TermsOfService.vue';
+import CheckOut from '../components/common/CheckOut.vue';
 
 
 
@@ -37,7 +38,10 @@ const routes = [
   {path: '/CreateSkipa', component: CreateSkipa},
   {path: '/ContactPage', component: ContactPage},
   {path: '/AboutUs', component: AboutUs},
-  {path: '/TermsOfService', component: TermsOfService}
+  {path: '/TermsOfService', component: TermsOfService},
+  {path: '/CheckOut', component: CheckOut,  meta: {
+    requiresAuth: true
+  }}
 ];
 
 const router = new VueRouter({

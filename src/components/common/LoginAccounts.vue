@@ -4,7 +4,7 @@
     <video autoplay muted loop class="video-bg"></video>
 
     <div
-      class="flex flex-col w-[100rem] max-w-md px-4 py-8 bg-gradient-to-r from-rose-100 to-teal-100 rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10"
+      class="flex flex-col w-[100rem] max-w-md px-4 py-8 bg-[#f2f2f798] rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10"
     >
       <div
         class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white"
@@ -12,7 +12,7 @@
         Login To Your Account
       </div>
       <div class="mt-8">
-        <form action="#" autoComplete="off">
+        <form class="login" @submit.prevent="login">
           <div class="flex flex-col mb-2">
             <div class="flex relative">
               <span
@@ -31,7 +31,7 @@
                 </svg>
               </span>
               <input
-                v-model="text"
+                v-model="email"
                 type="text"
                 id="sign-in-email"
                 class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
@@ -79,7 +79,7 @@
             <router-link>
               <button
                 type="submit"
-                class="glow-on-hover py-2 px-4 bg-gradient-to-r from-slate-500 to-yellow-100 hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                class="glow-on-hover py-2 px-4 bg-[#f2f2f798] hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
               >
                 Login
               </button>
@@ -105,9 +105,26 @@
 
 <script>
 import MyVideo from "@/components/MyVideo.vue";
+
 export default {
   components: {
     MyVideo,
+  },
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    login: function () {
+      let email = this.email;
+      let password = this.password;
+      this.$store
+        .dispatch("login", { email, password })
+        .then(() => this.$router.push("/AllTshirt"))
+        .catch((err) => console.log(err));
+    },
   },
 };
 </script>

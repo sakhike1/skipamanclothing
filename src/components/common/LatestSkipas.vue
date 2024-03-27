@@ -25,7 +25,8 @@
                     </div>
                 </div>
                 <div
-                    class="bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r flex items-center justify-center   md:w-[400px]">
+                    class="bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r
+                     flex items-center justify-center   md:w-[400px]">
                     <img rel="preload" class="w-[350px] h-[350px] object-cover max-w-full max-h-full "
                         :src="currentImage" />
                 </div>

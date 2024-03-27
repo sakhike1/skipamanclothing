@@ -62,7 +62,7 @@
             </div>
           </div>
           <div class="mb-4">
-            <span class="font-bold text-gray-700 dark:text-gray-300"> Color:</span>
+            <span class="font-bold text-gray-700 dark:text-gray-300"> Item Color:</span>
             <h1>{{ details.color }}</h1>
           </div>
           <div class="relative b-5 pr-20 inline-block text-left">

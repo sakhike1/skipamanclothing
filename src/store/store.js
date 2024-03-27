@@ -36,9 +36,9 @@ export const store = new Vuex.Store({
         ],
 
         dishesNearYou: [
-            { id: 7, name: 'skipaman', price: 199, url: samosa, desc: "Very tasty", rate: 4.2, color: "white" },
-            { id: 8, name: 'skipaman', price: 199, url: soup, desc: "Delicious", rate: 4.2, color: "black" },
-            { id: 9, name: 'skipaman', price: 199, url: tacos, desc: "Awesome!!", rate: 4.4,  color: "gray" }
+            { id: 7, name: 'skipaman', price: 199, url: samosa, desc: "Handcrafted by skipaman", rate: 4.2, color: "white" },
+            { id: 8, name: 'skipaman', price: 199, url: soup, desc: "Rock this coolest T-shirt", rate: 4.2, color: "black" },
+            { id: 9, name: 'skipaman', price: 199, url: tacos, desc: "our T-shirt are designed to last", rate: 4.4,  color: "gray" }
         ],
 
 
