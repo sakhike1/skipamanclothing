@@ -18,26 +18,27 @@ export const store = new Vuex.Store({
         state: {
 
         count: 0,
-        buttonColor: 'white',
+        selectedColor: null,
+        availableColors: ['black', 'red', 'blue', 'yellow', 'green', 'purple', 'orange'],
         selectedSize: null,
         isOpen: false,
     
         topRated: [
-            { id: 1, name: 'skipaman', price: 199, url: cake, desc: "our T-shirt are designed to last", rate: 4.1 },
-            { id: 2, name: 'skipaman', price: 199, url: noodles, desc: 'Handcrafted by skipaman', rate: 4.1 },
-            { id: 3, name: 'skipaman', price: 199, url: fries, desc: "Rock this coolest T-shirt", rate: 4.2 }
+            { id: 1, name: 'skipaman', price: 199, url: cake, desc: "our T-shirt are designed to last", rate: 4.1,   color: "black" },
+            { id: 2, name: 'skipaman', price: 199, url: noodles, desc: 'Handcrafted by skipaman', rate: 4.1, color: "black" },
+            { id: 3, name: 'skipaman', price: 199, url: fries, desc: "Rock this coolest T-shirt", rate: 4.2, color: "purple" }
         ],
 
         allCategories: [
-            { id: 4, name: 'skipaman', price: 199, url: macroni, desc: "our T-shirt are designed to last", rate: 4.5 },
-            { id: 5, name: 'skipaman', price: 199, url: pizza, desc: 'Handcrafted by skipaman', rate: 4.0 },
-            { id: 6, name: 'skipaman', price: 199, url: salad, desc: "Rock this coolest T-shirt", rate: 4.2 }
+            { id: 4, name: 'skipaman', price: 199, url: macroni, desc: "our T-shirt are designed to last", rate: 4.5, color: "gray"},
+            { id: 5, name: 'skipaman', price: 199, url: pizza, desc: 'Handcrafted by skipaman', rate: 4.0, color: "gray" },
+            { id: 6, name: 'skipaman', price: 199, url: salad, desc: "Rock this coolest T-shirt", rate: 4.2 , color: "gray" }
         ],
 
         dishesNearYou: [
-            { id: 7, name: 'skipaman', price: 199, url: samosa, desc: "Very tasty", rate: 4.2 },
-            { id: 8, name: 'skipaman', price: 199, url: soup, desc: "Delicious", rate: 4.2 },
-            { id: 9, name: 'skipaman', price: 199, url: tacos, desc: "Awesome!!", rate: 4.4 }
+            { id: 7, name: 'skipaman', price: 199, url: samosa, desc: "Very tasty", rate: 4.2, color: "white" },
+            { id: 8, name: 'skipaman', price: 199, url: soup, desc: "Delicious", rate: 4.2, color: "black" },
+            { id: 9, name: 'skipaman', price: 199, url: tacos, desc: "Awesome!!", rate: 4.4,  color: "gray" }
         ],
 
 
@@ -106,8 +107,8 @@ export const store = new Vuex.Store({
         updateSearchTerm(state, term) {
             state.searchTerm = term;
           },
-          setButtonColor(state, color) {
-            state.buttonColor = color;
+          setSelectedColor(state, color) {
+            state.selectedColor = color;
           },
           setSelectedSize(state, size) {
             state.selectedSize = size;
@@ -138,6 +139,9 @@ export const store = new Vuex.Store({
           },
           selectSize({ commit }, size) {
             commit('setSelectedSize', size);
+          },
+          selectColor({ commit }, color) {
+            commit('setSelectedColor', color);
           },
     },
     getters: {

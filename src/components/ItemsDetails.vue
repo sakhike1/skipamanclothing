@@ -62,25 +62,8 @@
             </div>
           </div>
           <div class="mb-4">
-            <span class="font-bold text-gray-700 dark:text-gray-300">Select Color:</span>
-            <div class="flex items-center mt-2">
-              <button
-                class="w-6 h-6 rounded-full bg-gray-800 dark:bg-gray-200 mr-2"
-                @click="selectColor('black')"
-              ></button>
-              <button
-                class="w-6 h-6 rounded-full bg-red-500 dark:bg-red-700 mr-2"
-                @click="selectColor('red')"
-              ></button>
-              <button
-                class="w-6 h-6 rounded-full bg-blue-500 dark:bg-blue-700 mr-2"
-                @click="selectColor('blue')"
-              ></button>
-              <button
-                class="w-6 h-6 rounded-full bg-yellow-500 dark:bg-yellow-700 mr-2"
-                @click="selectColor('yellow')"
-              ></button>
-            </div>
+            <span class="font-bold text-gray-700 dark:text-gray-300"> Color:</span>
+            <h1>{{ details.color }}</h1>
           </div>
           <div class="relative b-5 pr-20 inline-block text-left">
             <button
@@ -150,13 +133,17 @@
         </div>
       </div>
     </div>
+    <AlsoPurchased />
   </div>
 </template>
 
 <script>
+import AlsoPurchased from "@/components/common/AlsoPurchased.vue";
 export default {
   name: "ItemsDetails",
-  components: {},
+  components: {
+    AlsoPurchased,
+  },
   data() {
     return {
       details: this.$route.params,
@@ -169,6 +156,21 @@ export default {
     },
     selectedSize() {
       return this.$store.state.selectedSize;
+    },
+    availableColors() {
+      return this.$store.state.availableColors;
+    },
+    topRated() {
+      return this.$store.state.topRated;
+    },
+    allCategories() {
+      return this.$store.state.allCategories;
+    },
+    dishesNearYou() {
+      return this.$store.state.dishesNearYou;
+    },
+    trendingItems() {
+      return this.$store.state.trendingItems;
     },
   },
   methods: {
