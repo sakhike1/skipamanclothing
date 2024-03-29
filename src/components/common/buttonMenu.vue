@@ -1,10 +1,12 @@
 <template>
   <div class="container">
-    <ul class="menu text-right lg:menu-horizontal bg-base-200 rounded-box lg:mb-10">
+    <ul
+      class="menu border-none text-right lg:menu-horizontal bg-base-200 rounded-box lg:mb-10"
+    >
       <li>
         <details>
           <summary @click="toggleDropdown">Most popular</summary>
-          <ul v-if="isOpen">
+          <ul v-if="isOpen" data-aos="zoom-in-left">
             <li><router-link to="LatestArrivals">Sale</router-link></li>
             <li><router-link to="TrendingItems">Trending</router-link></li>
             <!-- Add other submenu items as needed -->
