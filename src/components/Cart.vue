@@ -162,7 +162,7 @@ export default {
       item: 0,
       gradients: [
         "conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60))",
-        "linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252))",
+        "linear-gradient(to right, rgb(100, 116, 139), rgb(254, 249, 195))",
         // Add more gradient color combinations as needed
       ],
       currentGradientIndex: 0,
