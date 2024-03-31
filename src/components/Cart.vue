@@ -137,12 +137,13 @@
           Shipping taxes, and discounts calculated at checkout
         </p>
 
-        <button
-          @click="checkout"
-          class="bg rounded-full py-4 px-6 text-black font-semibold text-lg w-full text-center transition-all duration-500 hover:bg-indigo-700"
-        >
-          Checkout
-        </button>
+        <router-link to="/CheckOut">
+          <button
+            class="bg rounded-full py-4 px-6 text-black font-semibold text-lg w-full text-center hover:scale-110 transition-all duration-500 hover:bg-indigo-700"
+          >
+            Checkout
+          </button>
+        </router-link>
       </div>
     </div>
     <no-item v-else></no-item>
@@ -188,14 +189,6 @@ export default {
     },
     stopBackgroundAnimation() {
       clearInterval(this.intervalId);
-    },
-    checkout: function () {
-      if (confirm("are you sure you want to purchase these products")) {
-        this.cart.items.forEach(function (item) {
-          item.product.inStock += item.quantity;
-        });
-        this.cart.items = [];
-      }
     },
   },
   computed: {

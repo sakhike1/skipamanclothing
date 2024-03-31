@@ -33,6 +33,7 @@
                 </svg>
               </span>
               <input
+                v-model="email"
                 type="text"
                 id="sign-in-email"
                 class="rounded-r-lg flex-1 appearance-none outline-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base"
@@ -58,6 +59,7 @@
                 </svg>
               </span>
               <input
+                v-model="password"
                 type="password"
                 id="sign-in-email"
                 class="rounded-r-lg flex-1 appearance-none outline-none border w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base"
@@ -110,6 +112,20 @@ AOS.init();
 export default {
   components: {
     MyVideo,
+  },
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      this.$store.dispatch("login", {
+        email: this.email,
+        password: this.password,
+      });
+    },
   },
 };
 </script>
