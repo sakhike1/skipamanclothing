@@ -1,16 +1,16 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import cake from '../assets/cake.png';
-import noodles from '../assets/noodles.png';
-import fries from '../assets/fries.png';
+import blackt from '../assets/blackt.png';
+import pacshirt from '../assets/pacshirt.png';
+import purple from '../assets/purple.png';
 
-import macroni from '../assets/macroni.png';
-import pizza from '../assets/pizza.png';
-import salad from '../assets/salad.png';
+import gray from '../assets/gray.png';
+import blues from '../assets/blues.png';
+import grays from '../assets/grays.png';
 
-import samosa from '../assets/samosa.png';
-import soup from '../assets/soup.png';
-import tacos from '../assets/tacos.png'
+import white from '../assets/white.png';
+import grace from '../assets/grace.png'
+import red from '../assets/red.png'
 
 Vue.use(Vuex);
 
@@ -24,21 +24,21 @@ export const store = new Vuex.Store({
         isOpen: false,
     
         topRated: [
-            { id: 1, name: 'skipaman', price: 199, url: cake, desc: "our T-shirt are designed to last", rate: 4.1,   color: "black" },
-            { id: 2, name: 'skipaman', price: 199, url: noodles, desc: 'Handcrafted by skipaman', rate: 4.1, color: "black" },
-            { id: 3, name: 'skipaman', price: 199, url: fries, desc: "Rock this coolest T-shirt", rate: 4.2, color: "purple" }
+            { id: 1, name: 'skipaman', price: 199, url: blackt, desc: "our T-shirt are designed to last", rate: 4.1,   color: "black" },
+            { id: 2, name: 'skipaman', price: 199, url: pacshirt, desc: 'Handcrafted by skipaman', rate: 4.1, color: "black" },
+            { id: 3, name: 'skipaman', price: 199, url: purple, desc: "Rock this coolest T-shirt", rate: 4.2, color: "purple" }
         ],
 
         allCategories: [
-            { id: 4, name: 'skipaman', price: 199, url: macroni, desc: "our T-shirt are designed to last", rate: 4.5, color: "gray"},
-            { id: 5, name: 'skipaman', price: 199, url: pizza, desc: 'Handcrafted by skipaman', rate: 4.0, color: "gray" },
-            { id: 6, name: 'skipaman', price: 199, url: salad, desc: "Rock this coolest T-shirt", rate: 4.2 , color: "gray" }
+            { id: 4, name: 'skipaman', price: 199, url: gray, desc: "our T-shirt are designed to last", rate: 4.5, color: "gray"},
+            { id: 5, name: 'skipaman', price: 199, url: blues, desc: 'Handcrafted by skipaman', rate: 4.0, color: "gray" },
+            { id: 6, name: 'skipaman', price: 199, url: grays, desc: "Rock this coolest T-shirt", rate: 4.2 , color: "gray" }
         ],
 
         dishesNearYou: [
-            { id: 7, name: 'skipaman', price: 199, url: samosa, desc: "Handcrafted by skipaman", rate: 4.2, color: "white" },
-            { id: 8, name: 'skipaman', price: 199, url: soup, desc: "Rock this coolest T-shirt", rate: 4.2, color: "black" },
-            { id: 9, name: 'skipaman', price: 199, url: tacos, desc: "our T-shirt are designed to last", rate: 4.4,  color: "gray" }
+            { id: 7, name: 'skipaman', price: 199, url: white, desc: "Handcrafted by skipaman", rate: 4.2, color: "white" },
+            { id: 9, name: 'skipaman', price: 199, url: red, desc: "our T-shirt are designed to last", rate: 4.4,  color: "gray" },
+            { id: 9, name: 'skipaman', price: 199, url: grace, desc: "our T-shirt are designed to last", rate: 4.4,  color: "gray" }
         ],
 
 
@@ -66,6 +66,14 @@ export const store = new Vuex.Store({
             require('@/assets/AboutImage2.png'),
             require('@/assets/AboutImage3.png'),
         ],
+
+        items: [
+            { name: 'blackTshirt', price: 199, title: 'black t-tshirt',  src: require('@/assets/blackTshirt.png') },
+            { name: 'Graytshirt', price: 199, title: 'gray tshirt',  src: require('@/assets/Graytshirt.png') },
+            { name: 'longsleeve', price: 199, title: 'long sleeve', src: require('@/assets/longsleeve.png') },
+            
+            
+          ],
     },
 
     mutations: {
