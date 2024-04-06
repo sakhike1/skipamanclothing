@@ -60,6 +60,7 @@
           v-for="(trendingItem, index) in trendingSearchItems"
           :key="index"
           to="/AllTshirt"
+          @click.native="closeSearchContainer"
           class="flex items-center bg-gray-700 rounded-full px-4 py-2 mr-2 mb-2 text-gray-100"
         >
           <span>#{{ trendingItem }}</span>
@@ -95,6 +96,7 @@
         <router-link
           to="/LatestArrivals"
           class="py-2 px-4 flex rounded-full justify-center hover:scale-110 items-center bg-gradient-to-r from-slate-500 to-yellow-100 hover:bg-slate-500 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md max-w-md"
+          @click.native="closeSearchContainer"
         >
           <button type="button">View all</button>
         </router-link>
@@ -129,6 +131,11 @@ export default {
     trendingSearchItems() {
       // Return trending search items excluding duplicates
       return Array.from(new Set(this.excludedTrendingItems));
+    },
+  },
+  methods: {
+    closeSearchContainer() {
+      this.input = ""; // Set input to empty string to close the search container
     },
   },
 };
