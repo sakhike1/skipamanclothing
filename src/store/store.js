@@ -151,6 +151,7 @@ export const store = new Vuex.Store({
           selectColor({ commit }, color) {
             commit('setSelectedColor', color);
           },
+         
     },
     getters: {
         

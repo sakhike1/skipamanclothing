@@ -103,7 +103,7 @@
           <div class="flex w-full">
             <button
               type="submit"
-              class="glow-on-hover py-2 px-4 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-xs font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              class="glow-on-hover py-2 px-4 text-white w-full transition ease-in duration-200 text-center text-xs font-semibold shadow-md rounded-lg"
             >
               Signup
             </button>

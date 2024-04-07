@@ -58,8 +58,12 @@
             quality. Made to withstand the test of time, Skipaman T-shirts boast a
             superior craftsmanship that sets them apart from the rest <a />
           </p>
+          <!-- Add buttons for each size -->
           <div class="flex justify-between items-center">
             <div class="flex items-center gap-4">
+              <!-- Loop through size options for the item -->
+
+              <!-- End of loop -->
               <button
                 v-on:click="removeItem(items)"
                 class="group rounded-[50px] border border-gray-200 shadow-sm shadow-transparent p-2.5 flex items-center justify-center bg-white transition-all duration-500 hover:shadow-gray-200 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300"
@@ -111,17 +115,17 @@
             </h6>
           </div>
         </div>
+        <button
+          class="rounded-full py-2.5 px-3 bg-indigo-50 text-black font-semibold text-xs text-center whitespace-nowrap transition-all duration-500 hover:bg-indigo-100"
+        >
+          {{ selectedSize ? selectedSize : "Selected Size" }}
+        </button>
       </div>
 
       <div
         class="flex flex-col md:flex-row items-center md:items-center justify-between lg:px-6 pb-6 border-b border-gray-200 max-lg:max-w-lg max-lg:mx-auto"
       >
         <div class="flex items-center justify-between gap-5">
-          <button
-            class="rounded-full py-2.5 px-3 bg-indigo-50 text-black font-semibold text-xs text-center whitespace-nowrap transition-all duration-500 hover:bg-indigo-100"
-          >
-            {{ selectedSize ? selectedSize : "Selected Size" }}
-          </button>
           <button
             class="rounded-full py-2.5 px-3 bg-indigo-50 text-black font-semibold text-xs text-center whitespace-nowrap transition-all duration-500 hover:bg-indigo-100"
           >

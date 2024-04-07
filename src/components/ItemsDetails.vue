@@ -90,7 +90,7 @@
               data-aos="zoom-in-up"
               v-if="$store.state.isOpen"
               @click="toggleDropdown"
-              class="origin-top-right p-2 absolute mr-[-15px] right-0 mt-4 w-[230px] rounded-md shadow-lg bg-gradient-to-r from-gray-700 via-gray-900 to-black ring-1 ring-black ring-opacity-5 focus:outline-none"
+              class="origin-top-right shadow-2xl p-2 absolute mr-[-15px] right-0 mt-4 w-[230px] rounded-md bg-gradient-to-r from-gray-700 via-gray-900 to-black ring-1 ring-black ring-opacity-5 focus:outline-none"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"

@@ -84,7 +84,7 @@
             <router-link>
               <button
                 type="submit"
-                class="glow-on-hover py-2 px-4 bg-[#f2f2f798] focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                class="glow-on-hover py-2 px-4 bg-[#f2f2f798] text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-lg"
               >
                 Login
               </button>
@@ -110,6 +110,7 @@
 
 <script>
 import MyVideo from "@/components/MyVideo.vue";
+import { mapMutations } from "vuex";
 
 export default {
   components: {
@@ -117,20 +118,28 @@ export default {
   },
   data() {
     return {
-      email: "",
+      username: "",
       password: "",
-      emailFocused: false,
-      passwordFocused: false,
     };
   },
   methods: {
-    login: function () {
-      let email = this.email;
-      let password = this.password;
-      this.$store
-        .dispatch("login", { email, password })
-        .then(() => this.$router.push("/AllTshirt"))
-        .catch((err) => console.log(err));
+    ...mapMutations(["setUser", "setToken"]),
+    async login(e) {
+      e.preventDefault();
+      const response = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: this.username,
+          password: this.password,
+        }),
+      });
+      const { user, token } = await response.json();
+      this.setUser(user);
+      this.setToken(token);
+      this.$router.push("/");
     },
   },
 };
