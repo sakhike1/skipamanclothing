@@ -111,10 +111,7 @@ export default {
       this.email = "";
       this.message = "";
       // Refresh the page
-      window.location.reload();
     },
   },
 };
 </script>
-
-<style lang="scss" scoped></style>
