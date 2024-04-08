@@ -35,7 +35,7 @@ export const store = new Vuex.Store({
             { id: 6, name: 'skipaman', price: 199, url: grays, desc: "Rock this coolest T-shirt", rate: 4.2 , color: "gray" }
         ],
 
-        dishesNearYou: [
+        besttshirt: [
             { id: 7, name: 'skipaman', price: 199, url: white, desc: "Handcrafted by skipaman", rate: 4.2, color: "white" },
             { id: 9, name: 'skipaman', price: 199, url: red, desc: "our T-shirt are designed to last", rate: 4.4,  color: "gray" },
             { id: 9, name: 'skipaman', price: 199, url: grace, desc: "our T-shirt are designed to last", rate: 4.4,  color: "gray" }

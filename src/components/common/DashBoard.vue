@@ -8,7 +8,7 @@
         v-for="items in topRated"
         :key="'toprated_' + items.id"
         v-on:click="ItemsDetails(items)"
-        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl"
       >
         <img
           :src="items.url"
@@ -63,7 +63,7 @@
         v-on:click="ItemsDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl"
       >
         <div></div>
         <a href="#">
@@ -116,12 +116,12 @@
       </div>
 
       <div
-        v-for="items in dishesNearYou"
-        :key="'dishesnearyou_' + items.id"
+        v-for="items in besttshirt"
+        :key="'besttshirt_' + items.id"
         v-on:click="ItemsDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl"
       >
         <a href="#">
           <img
@@ -178,7 +178,7 @@
         v-on:click="ItemsDetails(items)"
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl"
       >
         <a href="#">
           <img
@@ -248,8 +248,8 @@ export default {
     allCategories() {
       return this.$store.state.allCategories;
     },
-    dishesNearYou() {
-      return this.$store.state.dishesNearYou;
+    besttshirt() {
+      return this.$store.state.besttshirt;
     },
     trendingItems() {
       return this.$store.state.trendingItems;
