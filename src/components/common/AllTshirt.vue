@@ -120,7 +120,7 @@
       </div>
 
       <div
-        v-for="items in dishesNearYou"
+        v-for="items in besttshirt"
         :key="items.id"
         v-on:click="ItemsDetails(items)"
         data-aos="fade-up"
@@ -256,8 +256,8 @@ export default {
     allCategories() {
       return this.$store.state.allCategories;
     },
-    dishesNearYou() {
-      return this.$store.state.dishesNearYou;
+    besttshirt() {
+      return this.$store.state.besttshirt;
     },
     trendingItems() {
       return this.$store.state.trendingItems;

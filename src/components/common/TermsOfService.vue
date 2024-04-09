@@ -1,14 +1,14 @@
 <template>
   <section>
-    <div class="bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">
+    <div :style="{ background: backgroundGradient }">
       <!-- Title Container -->
       <div class="mx-auto w-full max-w-5xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
         <!-- Title Component -->
         <div class="flex flex-col items-stretch self-center text-center">
-          <h1 class="mb-5 text-4xl text-gray-700 font-bold md:text-6xl">
+          <h1 class="mb-5 text-4xl text-gray-50 font-bold md:text-6xl">
             Terms of Service
           </h1>
-          <p class="mb-10 flex-col text-xs text-[#000000]">
+          <p class="mb-10 flex-col text-xs text-[#ece3e3]">
             Read our terms below to learn more about your rights and responsibilities
           </p>
         </div>
@@ -84,7 +84,33 @@
 </template>
 
 <script>
-export default {};
-</script>
+export default {
+  data() {
+    return {
+      backgroundGradient: "", // Initial background gradient
+    };
+  },
+  created() {
+    this.changeBackgroundColor();
+  },
+  methods: {
+    changeBackgroundColor() {
+      // Set background gradient
+      const gradients = [
+        "linear-gradient(to right, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248))",
+        "linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8))",
+        "linear-gradient(to right, rgb(255, 206, 119), rgb(253, 121, 168), rgb(151, 120, 176))",
+      ];
 
-<style lang="scss" scoped></style>
+      // Get a random index to select a gradient from the array
+      const randomIndex = Math.floor(Math.random() * gradients.length);
+
+      // Set background gradient
+      this.backgroundGradient = gradients[randomIndex];
+
+      // Call this function recursively to change background gradient periodically
+      setTimeout(this.changeBackgroundColor, 3000); // Change gradient every 3 seconds
+    },
+  },
+};
+</script>
