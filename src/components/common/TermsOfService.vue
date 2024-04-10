@@ -8,7 +8,7 @@
           <h1 class="mb-5 text-4xl text-gray-50 font-bold md:text-6xl">
             Terms of Service
           </h1>
-          <p class="mb-10 flex-col text-xs text-[#ece3e3]">
+          <p class="mb-10 flex-col text-xs text-[#070707]">
             Read our terms below to learn more about your rights and responsibilities
           </p>
         </div>

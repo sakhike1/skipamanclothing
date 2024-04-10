@@ -7,7 +7,7 @@
           ><img :src="require('@/assets/image.png')" class="h-8 ms-2" alt=""
         /></router-link>
         <router-link to="/LatestArrivals" class="hidden md:block text-gray-400 px-4"
-          >Lates Arrival
+          >Latest Arrival
         </router-link>
         <router-link to="/AllTshirt" class="hidden md:block text-gray-400 px-4"
           >all T-shirt</router-link
@@ -123,19 +123,19 @@ export default {
       const element = document.querySelector(".rotate-element");
       element.style.transform = "rotate(0deg)";
     },
-    logout: function() {
+    logout: function () {
       this.$store.dispatch("logout").then(() => {
         this.$router.push("/login");
       });
-    }
+    },
   },
   computed: {
     count() {
       return this.$store.state.cartItemCount;
     },
-    isLoggedIn: function() {
+    isLoggedIn: function () {
       return this.$store.getters.isLoggedIn;
-    }
+    },
   },
 };
 </script>
