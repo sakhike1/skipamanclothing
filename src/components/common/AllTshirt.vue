@@ -2,6 +2,8 @@
   <div class="allitems">
     <SalesText />
     <buttonMenu />
+    
+    
     <section
       id="Projects"
       class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center p-20 justify-center gap-y-20 gap-x-14"
@@ -10,8 +12,6 @@
         v-for="items in topRated"
         :key="items.id"
         v-on:click="ItemsDetails(items)"
-        data-aos="fade-up"
-        data-aos-duration="3000"
         class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
       >
         <img
@@ -238,6 +238,7 @@
 import StarRating from "@/components/common/StarRating.vue";
 import SalesText from "@/components/common/SalesText.vue";
 import buttonMenu from "@/components/common/buttonMenu.vue";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -248,6 +249,7 @@ export default {
     StarRating,
     SalesText,
     buttonMenu,
+    
   },
   computed: {
     topRated() {
@@ -296,4 +298,6 @@ export default {
     rgba(242, 248, 255, 1) 100%
   );
 }
+
+
 </style>

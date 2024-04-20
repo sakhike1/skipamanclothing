@@ -7,7 +7,7 @@
         <button
           @click="changeButtonText"
           :style="{ backgroundImage: buttonBackgroundGradient }"
-          class="moving-button w-full shadow-xl hover:scale-105 lg:py-4 rounded-full px-4 lg:px-4 font-bold text-gray-600 text-md lg:text-md xl:text-md hover:opacity-90"
+          class="moving-button w-full shadow-xl hover:scale-105 lg:py-4 rounded-full px-4 lg:px-4 font-bold text-gray-600 text-md lg:text-sm xl:text-sm hover:opacity-90"
         >
           {{ buttonText }}
         </button>
@@ -137,15 +137,15 @@ export default {
         "Explore our new arrivals!",
       ],
       randomGradients: [
-        "linear-gradient(to right, rgb(254, 240, 138), rgb(251, 207, 232), rgb(244, 114, 182))",
-        "linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252))",
-        "linear-gradient(to right, rgb(254, 240, 138), rgb(251, 207, 232), rgb(244, 114, 182))",
-        "linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252))",
-        "linear-gradient(to right, rgb(254, 240, 138), rgb(251, 207, 232), rgb(244, 114, 182))",
-        "linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252))",
+        "linear-gradient(to right, rgb(165, 180, 252), rgb(192, 132, 252))",
+        "linear-gradient(to right, rgb(254, 202, 202), rgb(252, 165, 165), rgb(254, 240, 138))",
+        "linear-gradient(to right, rgb(165, 180, 252), rgb(192, 132, 252))",
+        "linear-gradient(to right, rgb(254, 202, 202), rgb(252, 165, 165), rgb(254, 240, 138))",
+        "linear-gradient(to right, rgb(165, 180, 252), rgb(192, 132, 252))",
+        "linear-gradient(to right, rgb(254, 202, 202), rgb(252, 165, 165), rgb(254, 240, 138))",
       ],
       buttonBackgroundGradient:
-        "linear-gradient(to right, rgb(254, 240, 138), rgb(251, 207, 232), rgb(244, 114, 182))", // Initial background color
+        "linear-gradient(to right, rgb(165, 180, 252), rgb(192, 132, 252))", // Initial background color
     };
   },
 };

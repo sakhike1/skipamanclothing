@@ -103,7 +103,7 @@
   </div>
 </template>
 
-<script>
+<script scope>
 import MyVideo from "@/components/MyVideo.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";

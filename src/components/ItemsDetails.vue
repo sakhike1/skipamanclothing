@@ -138,7 +138,7 @@
   </div>
 </template>
 
-<script>
+<script >
 import AlsoPurchased from "@/components/common/AlsoPurchased.vue";
 export default {
   name: "ItemsDetails",

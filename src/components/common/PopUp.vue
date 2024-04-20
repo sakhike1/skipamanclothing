@@ -1,43 +1,41 @@
 <template>
-    <div v-if="showScrollButton" ref="scrollTopButton" class="fixed bottom-[190px] right-10">
-        <button @click="scrollToTop" class="hover:scale-125  text-white font-bold py-2 px-4  ">
-            <img class="h-10 w-10" :src="require('@/assets/up-arrow.png')" />
-        </button>
-    </div>
+  <div
+    v-if="showScrollButton"
+    ref="scrollTopButton"
+    class="fixed bottom-[190px] right-10"
+  >
+    <button @click="scrollToTop" class="hover:scale-125 text-white font-bold py-2 px-4">
+      <img class="h-10 w-10" :src="require('@/assets/up-arrow.png')" />
+    </button>
+  </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
-export default defineComponent({
-    data() {
-        return {
-            showScrollButton: false
-        };
-    },
-    mounted() {
-        window.addEventListener("scroll", this.handleScroll);
-    },
+const showScrollButton = ref(false);
 
-    beforeUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
-    },
+function handleScroll() {
+  if (window.scrollY > 0) {
+    showScrollButton.value = true;
+  } else {
+    showScrollButton.value = false;
+  }
+}
 
-    methods: {
-        handleScroll() {
-            if (window.scrollY > 0) {
-                this.showScrollButton = true;
-            } else {
-                this.showScrollButton = false;
-            }
-        },
-        scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-    }
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
