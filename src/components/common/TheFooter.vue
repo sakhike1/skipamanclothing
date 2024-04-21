@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer p-10 bg-gradient-to-r from-gray-100 to-gray-300">
+  <footer class="footer z-40 p-10 bg-gradient-to-r from-gray-100 to-gray-300">
     <PopUp />
     <nav>
       <h6 class="footer-title">Services</h6>
@@ -94,6 +94,12 @@ nav {
 nav {
   background: none;
   background: none;
+}
+
+footer {
+  position: relative;
+  z-index: 1; /* Ensure the footer is above other content */
+  margin-top: auto; /* Push the footer to the bottom */
 }
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -7,7 +7,7 @@
         <button
           @click="changeButtonText"
           :style="{ backgroundImage: buttonBackgroundGradient }"
-          class="moving-button w-full shadow-xl hover:scale-105 lg:py-4 rounded-full px-4 lg:px-4 font-bold text-gray-600 text-md lg:text-sm xl:text-sm hover:opacity-90"
+          class="moving-button w-full shadow-xl hover:scale-105 lg:py-4 rounded-full px-4 lg:px-4 font-bold text-gray-100 text-md lg:text-sm xl:text-sm hover:opacity-90"
         >
           {{ buttonText }}
         </button>
