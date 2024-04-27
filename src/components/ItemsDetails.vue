@@ -4,11 +4,30 @@
       class="max-w-6xl mx-auto px-4 sm:px-6 from-slate-70 to-yellow-70 rounded-lg lg:px-8"
     >
       <div class="flex flex-col md:flex-row -mx-4">
+        <div class="flex flex-col mb-10 mt-20">
+          <!-- Assuming you have four small images stored in an array called `thumbnailImages` -->
+          <div
+            v-for="(thumbnail, index) in thumbnailImages"
+            :key="index"
+            class="mb-2 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900"
+          >
+            <img
+              @click="updateMainImage(thumbnail.url)"
+              :src="thumbnail.url"
+              alt="Thumbnail Image"
+              class="object-cover w-16 h-16 rounded-md cursor-pointer hover:border-gray-500"
+            />
+            <hr v-if="index === selectedImageIndex" class="my-1 border-gray-500" />
+          </div>
+        </div>
         <div class="md:flex-1 px-8 p-10">
           <div
             class="h-[460px] rounded-lg bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 dark:bg-gray-700 mb-4 flex justify-center items-center"
           >
             <img
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
               class="object-contain max-h-[290px] w-96 hover:scale-125"
               :src="details.url"
               alt="Product Image"
@@ -138,7 +157,7 @@
   </div>
 </template>
 
-<script >
+<script>
 import AlsoPurchased from "@/components/common/AlsoPurchased.vue";
 export default {
   name: "ItemsDetails",
@@ -149,8 +168,15 @@ export default {
     return {
       details: this.$route.params,
       isOpen: false,
+      url: "main_image_url",
+      currentMainImageUrl: null,
+      thumbnailImages: [
+        ...this.$route.params.thumbnailImages, // Existing thumbnail images
+        { url: this.$route.params.url, alt: "Main Image" }, // Main image
+      ], // Use thumbnailImages from route params
     };
   },
+
   computed: {
     count() {
       return this.$store.state.count;
@@ -191,6 +217,12 @@ export default {
     toggleDropdown(size) {
       this.$store.dispatch("toggleDropdown", size);
     },
+    updateMainImage(url) {
+      this.details.url = url;
+    },
+    displayMainImage(imageUrl) {
+      this.currentMainImageUrl = imageUrl;
+    },
   },
   created() {
     if (this.$route.params.id !== undefined) {
@@ -198,6 +230,7 @@ export default {
     }
   },
   mounted() {
+    console.log("Thumbnail Images:", this.thumbnailImages);
     this.details = JSON.parse(localStorage.getItem("details"));
   },
 };
