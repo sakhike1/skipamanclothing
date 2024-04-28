@@ -4,6 +4,12 @@ import router from './router';
 import { store } from './store/store';
 import './assets/tailwind.css';
 import Axios from 'axios';
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+
+
+
 
 
 Vue.config.productionTip = false;
@@ -22,6 +28,7 @@ if (token) {
 // Inject axios instance into Vue prototype
 Vue.prototype.$http = axiosInstance;
 
+Vue.use(VueSweetalert2); 
 
 
 new Vue({

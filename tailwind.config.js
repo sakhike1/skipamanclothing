@@ -1,5 +1,10 @@
 module.exports = {
   content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  modules: ['vue-sweetalert2/nuxt'],
+  sweetalert: {
+    confirmButtonColor: '#41b842',
+    cancelButtonColor: '#ff7674'
+  },
   theme: {
     screens: {
       'xs': '475px', // Extra small devices (portrait phones, less than 576px)
@@ -32,4 +37,6 @@ module.exports = {
     }
   },
   plugins: [require("daisyui")],
+  
+ 
 }

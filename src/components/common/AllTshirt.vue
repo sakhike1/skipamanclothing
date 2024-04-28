@@ -2,8 +2,7 @@
   <div class="allitems">
     <SalesText />
     <buttonMenu />
-    
-    
+
     <section
       id="Projects"
       class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center p-20 justify-center gap-y-20 gap-x-14"
@@ -231,6 +230,7 @@
         </a>
       </div>
     </section>
+    <div></div>
   </div>
 </template>
 
@@ -249,7 +249,6 @@ export default {
     StarRating,
     SalesText,
     buttonMenu,
-    
   },
   computed: {
     topRated() {
@@ -298,6 +297,4 @@ export default {
     rgba(242, 248, 255, 1) 100%
   );
 }
-
-
 </style>

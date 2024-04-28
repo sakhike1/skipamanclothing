@@ -5,7 +5,8 @@
 
     <div class="product-cards-container">
       <DashBoard />
-      <PromoPage />
+
+      <PopeUp />
     </div>
   </div>
 </template>
@@ -16,11 +17,12 @@
 import SalesText from "../components/common/SalesText.vue";
 import LatestSkipas from "../components/common/LatestSkipas.vue";
 import DashBoard from "../components/common/DashBoard.vue";
-import PromoPage from "../components/common/PromoPage.vue";
+
+import PopeUp from "../components/PopeUp.vue";
 
 export default {
   name: "HomeFace",
-  components: { DashBoard, LatestSkipas, SalesText, PromoPage },
+  components: { DashBoard, LatestSkipas, SalesText, PopeUp },
 
   data() {
     return {
