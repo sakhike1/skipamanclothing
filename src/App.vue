@@ -9,14 +9,10 @@
 </template>
 
 <script>
-
 import TheHeader from "./components/common/TheHeader";
 import BannerView from "./components/common/BannerView.vue";
-import TheFooter from "./components/common/TheFooter.vue"
-import SearchBar from './components/common/SearchBar.vue';
-
-
-
+import TheFooter from "./components/common/TheFooter.vue";
+import SearchBar from "./components/common/SearchBar.vue";
 
 export default {
   name: "App",
@@ -24,9 +20,8 @@ export default {
     BannerView,
     TheHeader,
     SearchBar,
-    TheFooter
-
-  }
+    TheFooter,
+  },
 };
 </script>
 

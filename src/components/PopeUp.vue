@@ -16,8 +16,7 @@
           class="max-w-lg mx-auto bg-gray-100 flex px-2 py-1 rounded-full text-left mt-12 border focus-within:border-gray-700">
           <input type="email" placeholder="Enter your email" v-model="email" required
             class="w-full outline-none bg-transparent text-sm text-[#333] px-4 py-3" />
-          <button @click="showAlert" type="button"
-            class="bg-[#333] hover:bg-[#222] transition-all text-white font-semibold text-sm rounded-full px-8 py-3">
+          <button @click="showAlert" type="button" ref="submitButton" :class="buttonClasses">
             Submit
           </button>
         </div>
@@ -30,6 +29,7 @@
 <script>
 import PopeUpVideo from "@/components/PopeUpVideo.vue";
 import Swal from "sweetalert2";
+
 export default {
   components: {
     PopeUpVideo,
@@ -37,35 +37,48 @@ export default {
   data() {
     return {
       videoSrc: require("@/assets/PopeUpVideo.mp4"),
-      showPopup: true, // Initially show the popup
-      email: "", // Store the email input value
+      showPopup: true,
+      email: "",
+      isButtonClicked: false,
+      gradients: [
+        "from-pink-500 via-red-500 to-yellow-500",
+        "from-blue-500 via-green-500 to-teal-500",
+        "from-yellow-500 via-green-500 to-blue-500",
+      ],
+      currentIndex: 0,
     };
   },
   methods: {
     showAlert() {
-      // Check if email is empty
       if (!this.email) {
-        // Show error alert if email is empty
         Swal.fire({
           icon: "error",
           title: "Oops...",
           text: "Please enter your email!",
+          width: 700,
+          margin: 100,
+          background: "#f2f8ff",
+          customClass: {
+            container: "custom-container",
+            popup: "custom-popup",
+            title: "custom-title",
+            content: "custom-content",
+            confirmButton: "custom-button",
+          },
         });
-        return; // Exit function if email is empty
+        return;
       }
 
-      // Check if email is valid (contains @ symbol)
       if (!this.isValidEmail(this.email)) {
-        // Show error alert if email is invalid
         Swal.fire({
           icon: "error",
+          position: "top-end",
           title: "Oops...",
           text: "Please enter a valid email address!",
         });
-        return; // Exit function if email is invalid
+        return;
       }
 
-      // Show success alert if email is entered and valid
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -79,18 +92,40 @@ export default {
       });
       Toast.fire({
         icon: "success",
-        title: "You have subscribe successful",
+        title: "You have subscribe successfully",
       }).then(() => {
-        // Refresh the page after showing the success alert
         window.location.reload();
       });
       return;
     },
     isValidEmail(email) {
-      // Regular expression to check if email contains @ symbol
       const emailRegex = /\S+@\S+\.\S+/;
       return emailRegex.test(email);
     },
+    changeBackgroundColor() {
+      setInterval(() => {
+        this.currentIndex = (this.currentIndex + 1) % this.gradients.length;
+      }, 2000);
+    },
+  },
+  computed: {
+    buttonClasses() {
+      return [
+        "bg-gradient-to-r",
+        this.gradients[this.currentIndex],
+        "hover:bg-[#222]",
+        "transition-all",
+        "text-gray-100",
+        "font-semibold",
+        "text-sm",
+        "rounded-full",
+        "px-8",
+        "py-3",
+      ];
+    },
+  },
+  mounted() {
+    this.changeBackgroundColor();
   },
 };
 </script>
@@ -103,7 +138,6 @@ export default {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent black background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,13 +152,9 @@ export default {
   border-radius: 10px;
 }
 
-.custom-popup {
-  background-image: linear-gradient(to right,
-      rgb(249, 168, 212),
-      rgb(216, 180, 254),
-      rgb(129, 140, 248));
-  color: white;
-  border-radius: 10px;
+.custom-container {
+  width: 100%;
+  background: rgb(233, 8, 120);
 }
 
 .custom-title {
@@ -134,10 +164,38 @@ export default {
 
 .custom-container {
   background-color: rgba(0, 0, 0, 0.5);
-  /* Example background color */
   border-radius: 10px;
-  /* Example border radius */
   padding: 20px;
-  /* Example padding */
+}
+
+.custom-content {
+  color: #646060;
+}
+
+.custom-button {
+  background-color: rgba(226, 27, 27, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.custom-popup {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.custom-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #948b8b;
+}
+
+.custom-content {
+  color: #333;
+}
+
+.custom-button {
+  width: 150px;
+  background: red;
 }
 </style>

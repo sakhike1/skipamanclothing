@@ -1,23 +1,11 @@
 <template>
   <div class="allitems">
-    <section
-      id="Projects"
-      class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center p-20 justify-center gap-y-20 gap-x-14"
-    >
-      <div
-        v-for="items in topRated"
-        :key="'toprated_' + items.id"
-        v-on:click="ItemsDetails(items)"
-        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl"
-      >
-        <img
-          :src="items.url"
-          alt="Product"
-          class="object-contain h-[290px] w-96 rounded-t-xl"
-        />
-        <hr
-          class="w-full h-[0.4px] bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700"
-        />
+    <section id="Projects"
+      class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center p-20 justify-center gap-y-20 gap-x-14">
+      <div v-for="items in topRated" :key="'toprated_' + items.id" v-on:click="ItemsDetails(items)"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl">
+        <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96 rounded-t-xl" />
+        <hr class="w-full h-[0.4px] bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700" />
         <div class="px-4 py-3 w-72">
           <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
           <p class="text-lg font-bold text-gray-400 truncate block capitalize">
@@ -38,43 +26,26 @@
           <StarRating />
           <button v-on:click="ItemsDetails(items)">
             <button
-              class="relative items-center w-40 justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
-            >
+              class="relative items-center w-40 justify-start inline-block px-4 py-3 overflow-hidden rounded-full group">
               <span
-                class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
-              ></span>
+                class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
               <span
-                class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"
-              ></span>
+                class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"></span>
               <span
-                class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
-                >Product
+                class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900">Product
               </span>
-              <span
-                class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"
-              ></span>
+              <span class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"></span>
             </button>
           </button>
         </div>
       </div>
-      <div
-        v-for="items in allCategories"
-        :key="'category_' + items.id"
-        v-on:click="ItemsDetails(items)"
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl"
-      >
+      <div v-for="items in allCategories" :key="'category_' + items.id" v-on:click="ItemsDetails(items)"
+        data-aos="fade-up" data-aos-duration="3000"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl">
         <div></div>
         <a href="#">
-          <img
-            :src="items.url"
-            alt="Product"
-            class="object-contain h-[290px] w-96 rounded-t-xl"
-          />
-          <hr
-            class="w-full h-[0.4px] bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700"
-          />
+          <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96 rounded-t-xl" />
+          <hr class="w-full h-[0.4px] bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700" />
           <div class="px-4 py-3 w-72">
             <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
             <p class="text-lg font-bold text-gray-400 truncate block capitalize">
@@ -94,44 +65,27 @@
             <StarRating />
             <button v-on:click="ItemsDetails(items)">
               <button
-                class="relative items-center justify-start w-40 inline-block px-4 py-3 overflow-hidden rounded-full group"
-              >
+                class="relative items-center justify-start w-40 inline-block px-4 py-3 overflow-hidden rounded-full group">
                 <span
-                  class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
-                ></span>
+                  class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
                 <span
-                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"
-                ></span>
+                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"></span>
                 <span
-                  class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
-                  >Product
+                  class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900">Product
                 </span>
-                <span
-                  class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"
-                ></span>
+                <span class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"></span>
               </button>
             </button>
           </div>
         </a>
       </div>
 
-      <div
-        v-for="items in besttshirt"
-        :key="'besttshirt_' + items.id"
-        v-on:click="ItemsDetails(items)"
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl"
-      >
+      <div v-for="items in besttshirt" :key="'besttshirt_' + items.id" v-on:click="ItemsDetails(items)"
+        data-aos="fade-up" data-aos-duration="3000"
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl">
         <a href="#">
-          <img
-            :src="items.url"
-            alt="Product"
-            class="object-contain h-[290px] w-96 rounded-t-xl"
-          />
-          <hr
-            class="w-full h-[0.4px] bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700"
-          />
+          <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96 rounded-t-xl" />
+          <hr class="w-full h-[0.4px] bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700" />
           <div class="px-4 py-3 w-72">
             <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
             <p class="text-lg font-bold text-gray-400 truncate block capitalize">
@@ -151,44 +105,27 @@
             <StarRating />
             <button v-on:click="ItemsDetails(items)">
               <button
-                class="relative items-center w-40 justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
-              >
+                class="relative items-center w-40 justify-start inline-block px-4 py-3 overflow-hidden rounded-full group">
                 <span
-                  class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
-                ></span>
+                  class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
                 <span
-                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"
-                ></span>
+                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"></span>
                 <span
-                  class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
-                  >Product
+                  class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900">Product
                 </span>
-                <span
-                  class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"
-                ></span>
+                <span class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"></span>
               </button>
             </button>
           </div>
         </a>
       </div>
 
-      <div
-        v-for="items in allCategories"
-        :key="items.id"
-        v-on:click="ItemsDetails(items)"
-        data-aos="fade-up"
+      <div v-for="items in allCategories" :key="items.id" v-on:click="ItemsDetails(items)" data-aos="fade-up"
         data-aos-duration="3000"
-        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl"
-      >
+        class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:shadow-xl">
         <a href="#">
-          <img
-            :src="items.url"
-            alt="Product"
-            class="object-contain h-[290px] w-96 rounded-t-xl"
-          />
-          <hr
-            class="w-full h-[0.4px] bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700"
-          />
+          <img :src="items.url" alt="Product" class="object-contain h-[290px] w-96 rounded-t-xl" />
+          <hr class="w-full h-[0.4px] bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700" />
           <div class="px-4 py-3 w-72">
             <span class="text-gray-400 mr-3 uppercase text-xs">{{ items.name }}</span>
             <p class="text-lg font-bold text-gray-400">100% cotton Heavy T-shirts</p>
@@ -206,21 +143,15 @@
             <star-rating />
             <button v-on:click="ItemsDetails(items)">
               <button
-                class="relative items-center w-40 justify-start inline-block px-4 py-3 overflow-hidden rounded-full group"
-              >
+                class="relative items-center w-40 justify-start inline-block px-4 py-3 overflow-hidden rounded-full group">
                 <span
-                  class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"
-                ></span>
+                  class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
                 <span
-                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"
-                ></span>
+                  class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 opacity-50 group-hover:-translate-x-8"></span>
                 <span
-                  class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900"
-                  >Product
+                  class="relative w-full text-left text-xs text-gray-500 transition-colors duration-200 ease-in-out group-hover:text-gray-900">Product
                 </span>
-                <span
-                  class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"
-                ></span>
+                <span class="absolute inset-0 border-[0.5px] border-gray-400 rounded-full"></span>
               </button>
             </button>
           </div>
@@ -269,7 +200,7 @@ export default {
   display: block;
 }
 
-.responsive-three-column-grid > * {
+.responsive-three-column-grid>* {
   padding: 1rem;
 }
 
@@ -281,6 +212,5 @@ export default {
   }
 }
 
-.allitems {
-}
+.allitems {}
 </style>

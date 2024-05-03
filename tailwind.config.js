@@ -2,8 +2,8 @@ module.exports = {
   content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   modules: ['vue-sweetalert2/nuxt'],
   sweetalert: {
-    confirmButtonColor: '#41b842',
-    cancelButtonColor: '#ff7674'
+    
+    confirmButton: '800px'
   },
   theme: {
     screens: {

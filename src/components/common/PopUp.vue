@@ -1,9 +1,5 @@
 <template>
-  <div
-    v-if="showScrollButton"
-    ref="scrollTopButton"
-    class="fixed bottom-[190px] right-10"
-  >
+  <div v-if="showScrollButton" ref="scrollTopButton" class="fixed bottom-[190px] right-10">
     <button @click="scrollToTop" class="hover:scale-125 text-white font-bold py-2 px-4">
       <img class="h-10 w-10" :src="require('@/assets/up-arrow.png')" />
     </button>
@@ -39,6 +35,4 @@ onBeforeUnmount(() => {
 });
 </script>
 
-<style scoped>
-/* Add any custom styles here */
-</style>
+<style scoped></style>

@@ -5,9 +5,9 @@
 
         <section data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"
             class="overflow-hidden     md:p-8 ">
-            <div class="flex flex-col w-[85%] md:flex-row mx-auto">
+            <div class="flex flex-col   w-[85%] md:flex-row mx-auto">
                 <div :style="{ background: color }"
-                    class="p-4 sm:p-8 lg:p-16  md:w-56 lg:w-48 flex-grow order-last md:order-first">
+                    class="p-4 sm:p-8 lg:p-16 md:w-56 lg:w-48 flex-grow order-last md:order-first">
                     <div id="skipaman" class="text-left md:w pt-7 sm:text-left rtl:sm:text-right">
                         <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-black">
                             Latest skipas
@@ -24,8 +24,7 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r
+                <div class="from-gray-900 to-gray-600 bg-gradient-to-r
                      flex items-center justify-center   md:w-[400px]">
                     <img rel="preload" class="w-[350px] h-[350px] object-cover max-w-full max-h-full "
                         :src="currentImage" />
@@ -78,11 +77,11 @@ export default {
 
         randomColor() {
             const gradients = [
-                
+
                 'linear-gradient(to right, rgb(100, 116, 139), rgb(254, 249, 195))',
                 'conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60))',
                 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900',
-                
+
 
             ];
             this.color = gradients[Math.floor(Math.random() * gradients.length)];
