@@ -59,7 +59,7 @@ export default {
             currentImageIndex: 0,
             autoPlayTimer: null,
             currentImage: '',
-            color: 'linear-gradient(to right, rgb(156, 163, 175), rgb(75, 85, 99), rgb(30, 64, 175))',
+            color: 'linear-gradient(to top, #bdc3c7, #2c3e50)',
         };
     },
     methods: {
@@ -78,9 +78,8 @@ export default {
         randomColor() {
             const gradients = [
 
-                'linear-gradient(to right, rgb(100, 116, 139), rgb(254, 249, 195))',
-                'conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60))',
-                'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900',
+                'linear-gradient(to bottom, #bdc3c7, #2c3e50)',
+
 
 
             ];

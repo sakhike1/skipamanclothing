@@ -1,16 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import blackt from '@/assets/blackt.png';
-import pacshirt from '@/assets/pacshirt.png';
-import purple from '@/assets/purple.png';
+import blackt  from '@/assets/skipaimage10.png';
+import whiteT  from '@/assets/New60.png';
+import melody from '@/assets/new64.png'
+import retired from '@/assets/new72.png'
+import whiteTshirt from '@/assets/skipaimage14.png'
 
-import gray from '@/assets/gray.png';
-import blues from '@/assets/blues.png';
-import grays from '@/assets/grays.png';
 
-import white from '@/assets/white.png';
-import grace from '@/assets/grace.png'
-import red from '@/assets/red.png'
+
 
 Vue.use(Vuex);
 
@@ -25,74 +22,74 @@ export const store = new Vuex.Store({
     
         topRated: [
             { id: 1, name: 'skipaman', price: 199, url: blackt, thumbnailImages: [
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
+                { url: require('@/assets/skipaimage11.png') },
+                { url: require('@/assets/skipaimage12.png') },
+                { url: require('@/assets/skipaimage13.png') },
+                
                 // Add more small images as needed for item 1
               ], desc: "our T-shirt are designed to last", rate: 4.1,   color: "black" },
-            { id: 2, name: 'skipaman', price: 199, url: pacshirt, thumbnailImages: [
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
+            { id: 2, name: 'skipaman', price: 199, url: whiteT, thumbnailImages: [
+              { url: require('@/assets/new61.png') },
+              { url: require('@/assets/new62.png') },
+              { url: require('@/assets/new63.png') },
+                
                 // Add more small images as needed for item 1
               ], desc: 'Handcrafted by skipaman', rate: 4.1, color: "black" },
-            { id: 3, name: 'skipaman', price: 199, url: purple, thumbnailImages: [
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
+            { id: 3, name: 'skipaman', price: 199, url: melody , thumbnailImages: [
+              { url: require('@/assets/new65.png') },
+              { url: require('@/assets/new66.png') },
+              { url: require('@/assets/new67.png') },
+                
                 // Add more small images as needed for item 1
               ], desc: "Rock this coolest T-shirt", rate: 4.2, color: "purple" }
         ],
 
         allCategories: [
-            { id: 4, name: 'skipaman', price: 199, url: gray,thumbnailImages: [
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                // Add more small images as needed for item 1
-              ], desc: "our T-shirt are designed to last", rate: 4.5, color: "gray"},
-            { id: 5, name: 'skipaman', price: 199, url: blues, thumbnailImages: [
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                // Add more small images as needed for item 1
-              ], desc: 'Handcrafted by skipaman', rate: 4.0, color: "gray" },
-            { id: 6, name: 'skipaman', price: 199, url: grays, thumbnailImages: [
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                // Add more small images as needed for item 1
-              ], desc: "Rock this coolest T-shirt", rate: 4.2 , color: "gray" }
+          { id: 1, name: 'skipaman', price: 199, url: retired, thumbnailImages: [
+            { url: require('@/assets/new73.png') },
+            { url: require('@/assets/new74.png') },
+            { url: require('@/assets/new75.png') },
+            
+            // Add more small images as needed for item 1
+          ], desc: "our T-shirt are designed to last", rate: 4.1,   color: "black" },
+        { id: 2, name: 'skipaman', price: 199, url: whiteTshirt, thumbnailImages: [
+          { url: require('@/assets/skipaimage15.png') },
+          { url: require('@/assets/skipaimage16.png') },
+          { url: require('@/assets/skipaimage17.png') },
+            
+            // Add more small images as needed for item 1
+          ], desc: 'Handcrafted by skipaman', rate: 4.1, color: "black" },
+        { id: 3, name: 'skipaman', price: 199, url: blackt, thumbnailImages: [
+          { url: require('@/assets/new12.png') },
+                { url: require('@/assets/new15.png') },
+                { url: require('@/assets/new18.png') },
+            
+            // Add more small images as needed for item 1
+          ], desc: "Rock this coolest T-shirt", rate: 4.2, color: "purple" }
         ],
 
         besttshirt: [
-            { id: 7, name: 'skipaman', price: 199, url: white, thumbnailImages: [
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                // Add more small images as needed for item 1
-              ], desc: "Handcrafted by skipaman", rate: 4.2, color: "white" },
-            { id: 8, name: 'skipaman', price: 199, url: red, thumbnailImages: [
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                // Add more small images as needed for item 1
-              ], desc: "our T-shirt are designed to last", rate: 4.4,  color: "gray" },
-            { id: 9, name: 'skipaman', price: 199, url: grace, thumbnailImages: [
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                { url: require('@/assets/zaza1.png') },
-                { url: require('@/assets/zaza2.png') },
-                // Add more small images as needed for item 1
-              ], desc: "our T-shirt are designed to last", rate: 4.4,  color: "gray" }
+          { id: 1, name: 'skipaman', price: 199, url: blackt, thumbnailImages: [
+            { url: require('@/assets/new30.png') },
+            { url: require('@/assets/new31.png') },
+            { url: require('@/assets/new33.png') },
+            
+            // Add more small images as needed for item 1
+          ], desc: "our T-shirt are designed to last", rate: 4.1,   color: "black" },
+        { id: 2, name: 'skipaman', price: 199, url: blackt, thumbnailImages: [
+          { url: require('@/assets/new12.png') },
+          { url: require('@/assets/new15.png') },
+          { url: require('@/assets/new18.png') },
+            
+            // Add more small images as needed for item 1
+          ], desc: 'Handcrafted by skipaman', rate: 4.1, color: "black" },
+        { id: 3, name: 'skipaman', price: 199, url: blackt, thumbnailImages: [
+          { url: require('@/assets/new12.png') },
+          { url: require('@/assets/new15.png') },
+          { url: require('@/assets/new18.png') },
+            
+            // Add more small images as needed for item 1
+          ], desc: "Rock this coolest T-shirt", rate: 4.2, color: "purple" }
         ],
 
 
@@ -102,10 +99,10 @@ export const store = new Vuex.Store({
        
 
         imageSources: [
-            require('@/assets/skipa1.png'),
-            require('@/assets/skipa2.png'),
-            require('@/assets/skipa3.png'),
-            require('@/assets/skipa4.png'),
+            require('@/assets/skipaimage1.png'),
+            require('@/assets/skipaimage2.png'),
+            require('@/assets/skipaimage3.png'),
+            require('@/assets/skipaimage4.png'),
             // Add more image sources as needed
         ],
 
@@ -122,7 +119,7 @@ export const store = new Vuex.Store({
         ],
 
         items: [
-            { name: 'blackTshirt', price: 199, title: 'black t-tshirt',  src: require('@/assets/blackTshirt.png') },
+            { name: 'blackt shirt', price: 199, title: 'black t-tshirt',  src: require('@/assets/blackt.png') },
             { name: 'Graytshirt', price: 199, title: 'gray tshirt',  src: require('@/assets/Graytshirt.png') },
             { name: 'longsleeve', price: 199, title: 'long sleeve', src: require('@/assets/longsleeve.png') },
             

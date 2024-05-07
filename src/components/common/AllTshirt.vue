@@ -4,7 +4,7 @@
     <buttonMenu />
 
     <section id="Projects"
-      class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center p-20 justify-center gap-y-20 gap-x-14">
+      class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center p-10 justify-center gap-y-20 gap-x-14">
       <div v-for="item in topRated" :key="item.id" @click="ItemsDetails(item)"
         class="w-73 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <div @mouseover="handleContainerHover(item)" @mouseleave="resetHoveredItem">
@@ -157,19 +157,19 @@ export default {
     topRated() {
       return this.$store.state.topRated.map((item) => ({
         ...item,
-        thumbnailUrl: require("@/assets/zaza1.png"), // Use require dynamically
+        thumbnailUrl: require("@/assets/new12.png"), // Use require dynamically
       }));
     },
     allCategories() {
       return this.$store.state.allCategories.map((item) => ({
         ...item,
-        thumbnailUrl: require("@/assets/zaza1.png"), // Use require dynamically
+        thumbnailUrl: require("@/assets/new12.png"), // Use require dynamically
       }));
     },
     besttshirt() {
       return this.$store.state.besttshirt.map((item) => ({
         ...item,
-        thumbnailUrl: require("@/assets/zaza1.png"), // Use require dynamically
+        thumbnailUrl: require("@/assets/new12.png"), // Use require dynamically
       }));
     },
   },

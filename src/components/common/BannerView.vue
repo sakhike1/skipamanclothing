@@ -1,15 +1,10 @@
 <template>
-  <div
-    class="banner-navigation border-b-1 border-gray-200 p-8"
-    :style="{ backgroundImage: currentGradient }"
-  >
-    <div class="banner-content flex items-center">
-      <p>{{ salesText }}</p>
+  <div class="banner-navigation border-b-1 border-gray-200 p-8" :style="{ backgroundImage: currentGradient }">
+    <div class="banner-content text-white text-xs flex items-center">
+      <p class="text-xs">{{ salesText }}</p>
 
-      <router-link
-        to="/AllTshirt"
-        class="shopnow animate__animated animate__bounce inline-flex sm:h-8 sm:text-xs sm:mr-2 items-center justify-center h-10 px-8 m-5 font-medium tracking-wide text-white transition duration-200 bg-gradient-to-r from-indigo-300 to-purple-400 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none"
-      >
+      <router-link to="/AllTshirt"
+        class="shopnow animate__animated animate__bounce inline-flex sm:h-8 sm:text-xs sm:mr-2 items-center justify-center mt-8 h-10 px-8 m-5 font-medium tracking-wide text-white transition duration-200 bg-gradient-to-r from-indigo-300 to-purple-400 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
         {{ buttonText }}
       </router-link>
     </div>
@@ -20,21 +15,20 @@
 export default {
   data() {
     return {
-      salesText: "Summer Sale! Up to 50% Off" + "  ",
+      salesText: "Summer Sale! Up to 50% Off" + " shop now while stock last",
       buttonText: "Shop Now",
       gradients: [
-        "conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60))",
-
-        "linear-gradient(to right, rgb(254, 240, 138), rgb(251, 207, 232), rgb(244, 114, 182))",
+        "linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))",
+        "linear-gradient(90deg, rgba(0,0,0,0.9752275910364145) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%)",
         // Add more gradient color combinations as needed
       ],
       currentGradientIndex: 0,
       intervalId: null,
       intervalDuration: 7500, // Interval duration in milliseconds (10 seconds)
       saleTexts: [
-        "Summer Sale! Up to 50% Off",
-        "Winter Clearance! Don't Miss Out!",
-        "Spring Fever Sale! Grab Your Favorites!",
+        "Summer Sale! Up to 50% Off free delivery on order more than R600",
+        "Winter Clearance! Don't Miss Out! get outside looking fresh",
+        "Spring Fever Sale! Grab Your Favorites! style is a gift",
         // Add more sales texts as needed
       ],
       buttonTexts: [
