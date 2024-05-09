@@ -10,7 +10,11 @@
 export default {
   data() {
     return {
+<<<<<<< HEAD
       videoSrc: require("@/assets/CreateOne.mp4"), // Adjust the path to your video file
+=======
+      videoSrc: require("@/assets/CreateOne.mp4"), // Adjust the path to your video file
+>>>>>>> 07d60d306e16f2f212591d9cbde1b6a411cd0d5d
     };
   },
   mounted() {
@@ -27,5 +31,7 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  <<<<<<< HEAD=======z-index: -1;
+  >>>>>>>07d60d306e16f2f212591d9cbde1b6a411cd0d5d
 }
 </style>
