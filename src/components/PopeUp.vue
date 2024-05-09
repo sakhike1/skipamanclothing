@@ -13,9 +13,9 @@
           and exclusive offers. Get valuable insights. Join our community today!
         </p>
         <div
-          class="max-w-lg mx-auto bg-gray-100 flex px-2 py-1 rounded-full text-left mt-12 border focus-within:border-gray-700">
+          class="max-w-lg mx-auto bg-gray-100 flex px-2 py-1 rounded-full text-left mt-12 border focus-within:border-gray-100">
           <input type="email" placeholder="Enter your email" v-model="email" required
-            class="w-full outline-none bg-transparent text-sm text-[#333] px-4 py-3" />
+            class="w-full outline-none bg-transparent text-sm text-[#fafafa] px-4 py-3" />
           <button @click="showAlert" type="button" ref="submitButton" :class="buttonClasses">
             Submit
           </button>

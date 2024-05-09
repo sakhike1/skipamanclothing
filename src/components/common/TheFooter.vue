@@ -1,49 +1,82 @@
 <template>
-  <footer class="footer z-40 p-10 bg-gradient-to-r from-gray-100 to-gray-300">
-    <nav>
-      <h6 class="footer-title">Services</h6>
-      <router-link to="/AboutUs" class="link link-hover">Clothing services</router-link>
-      <router-link to="/" class="link link-hover">Services</router-link>
-    </nav>
-    <nav>
-      <h6 class="footer-title">Company</h6>
-      <router-link to="AboutUs" class="link link-hover">About us</router-link>
-      <router-link to="/ContactPage" class="link link-hover">Contact</router-link>
-    </nav>
-    <nav>
-      <h6 class="footer-title">Legal</h6>
-      <router-Link to="/TermsOfService" class="link link-hover">Terms of use</router-Link>
-    </nav>
-    <aside class="items-center grid-flow-col">
-      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-        clip-rule="evenodd" class="fill-current">
-        <path
-          d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
-        </path>
-      </svg>
-      <p>Skipamanclothing <br />Providing quality always</p>
-    </aside>
-    <nav class="md:place-self-center md:justify-self-end">
-      <div class="grid grid-flow-col gap-4">
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-            <path
-              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
-            </path>
-          </svg></a>
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-            <path
-              d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
-            </path>
-          </svg></a>
-        <a href="https://www.instagram.com/skipaman/?hl=en">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-            <path
-              d="M12 2.962c3.204 0 3.584.012 4.849.07 1.364.061 2.826.255 3.927 1.356 1.102 1.102 1.295 2.562 1.356 3.927.057 1.266.07 1.646.07 4.849s-.012 3.584-.07 4.849c-.061 1.364-.255 2.826-1.356 3.927-1.102 1.102-2.562 1.295-3.927 1.356-1.266.057-1.646.07-4.849.07s-3.584-.012-4.849-.07c-1.364-.061-2.826-.255-3.927-1.356-1.102-1.102-1.295-2.562-1.356-3.927-.057-1.266-.07-1.646-.07-4.849s.012-3.584.07-4.849c.061-1.364.255-2.826 1.356-3.927 1.102-1.102 2.562-1.295 3.927-1.356 1.266-.057 1.646-.07 4.849-.07zm0-2.962c-3.294 0-3.675.012-4.976.07-1.578.07-3.112.378-4.426 1.692-1.314 1.314-1.622 2.848-1.692 4.426-.058 1.301-.07 1.682-.07 4.976s.012 3.675.07 4.976c.07 1.578.378 3.112 1.692 4.426 1.314 1.314 2.848 1.622 4.426 1.692 1.301.058 1.682.07 4.976.07s3.675-.012 4.976-.07c1.578-.07 3.112-.378 4.426-1.692 1.314-1.314 1.622-2.848 1.692-4.426.058-1.301.07-1.682.07-4.976s-.012-3.675-.07-4.976c-.07-1.578-.378-3.112-1.692-4.426-1.314-1.314-2.848-1.622-4.426-1.692-1.301-.058-1.682-.07-4.976-.07zm0 5.234a4.766 4.766 0 100 9.532 4.766 4.766 0 000-9.532zm0 7.514a2.748 2.748 0 110-5.496 2.748 2.748 0 010 5.496zm9.153-11.667c-.45 0-.816-.365-.816-.815s.365-.816.816-.816.815.365.815.816-.365.815-.815.815z" />
-            <path fill="none" d="M0 0h24v24H0z" />
-          </svg>
-        </a>
+  <!-- Footer container -->
+  <footer class="p-10 font-[sans-serif] tracking-wide">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="lg:flex lg:items-center">
+        <router-link to="/">
+          <img :src="require('@/assets/ski.png')" class="w-56 h-[60px] object-contain ms-2" alt="" />
+        </router-link>
       </div>
-    </nav>
+
+      <div class="lg:flex lg:items-center">
+        <ul class="flex space-x-6">
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 hover:fill-white w-7 h-7"
+                viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                  d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7v-7h-2v-3h2V8.5A3.5 3.5 0 0 1 15.5 5H18v3h-2a1 1 0 0 0-1 1v2h3v3h-3v7h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <svg xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 hover:fill-white w-7 h-7"
+                viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                  d="M21 5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5zm-2.5 8.2v5.3h-2.79v-4.93a1.4 1.4 0 0 0-1.4-1.4c-.77 0-1.39.63-1.39 1.4v4.93h-2.79v-8.37h2.79v1.11c.48-.78 1.47-1.3 2.32-1.3 1.8 0 3.26 1.46 3.26 3.26zM6.88 8.56a1.686 1.686 0 0 0 0-3.37 1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 1.57v8.37H5.5v-8.37h2.77z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="fill-gray-300 hover:fill-white w-7 h-7"
+                viewBox="0 0 24 24">
+                <path
+                  d="M22.92 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.83 4.5 17.72 4 16.46 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.9 20.29 6.16 21 8.58 21c7.88 0 12.21-6.54 12.21-12.21 0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-6 text-white">Contact us</h4>
+        <ul class="space-y-4">
+          <li>
+            <router-link to="/ContactPage" class="text-gray-300 hover:text-white text-sm">Contact us
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/TermsOfService" class="text-gray-300 hover:text-white text-sm">Terms &amp;
+              Conditions</router-link>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-6 text-white">Information</h4>
+        <ul class="space-y-4">
+          <li>
+            <router-link to="/AboutUs" class="text-gray-300 hover:text-white text-sm">About Us</router-link>
+          </li>
+          <li>
+            <router-link to="/TermsOfService" class="text-gray-300 hover:text-white text-sm">Terms &amp;
+              Conditions</router-link>
+          </li>
+          <li>
+            <router-link to="TermsOfService" class="text-gray-300 hover:text-white text-sm">Privacy Policy</router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-gray-100 text-sm ml-10 ms-[80px]">
+      © 2023<a href="https://readymadeui.com/" target="_blank" class="hover:underline mx-1">Skipaman</a>All Rights
+      Reserved.
+    </p>
   </footer>
 </template>
 
@@ -53,7 +86,7 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
 nav {
   background: none;
 }
@@ -66,9 +99,8 @@ nav {
 footer {
   position: relative;
   z-index: 1;
-  /* Ensure the footer is above other content */
+
   margin-top: auto;
-  /* Push the footer to the bottom */
+  background: black;
 }
 </style>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
