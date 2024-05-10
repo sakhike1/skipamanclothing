@@ -10,11 +10,11 @@ import AllTshirt from '../components/common/AllTshirt.vue';
 import TrendingItems from '../components/common/TrendingItems.vue';
 import AmazazaView from  '../components/common/AmazazaView.vue';
 import SalesNow  from   '../components/common/SalesNow.vue';
-import CreateSkipa from '../components/common/CreateSkipa.vue';
 import ContactPage from '../components/common/ContactPage.vue';
 import AboutUs from '../components/common/AboutUs.vue';
 import TermsOfService from '../components/common/TermsOfService.vue';
 import CheckOut from '../components/common/CheckOut.vue';
+import RequestTshirt from '../components/common/RequestTshirt.vue';
 
 
 
@@ -35,10 +35,10 @@ const routes = [
   {path: '/TrendingItems', component: TrendingItems},
   {path: '/AmazazaView', component: AmazazaView},
   {path: '/SalesNow', component: SalesNow},
-  {path: '/CreateSkipa', component: CreateSkipa},
   {path: '/ContactPage', component: ContactPage},
   {path: '/AboutUs', component: AboutUs},
   {path: '/TermsOfService', component: TermsOfService},
+  {path: '/RequestTshirt', component: RequestTshirt},
   {path: '/CheckOut', component: CheckOut,  meta: {
     requiresAuth: true
   }}

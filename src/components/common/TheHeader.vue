@@ -8,7 +8,7 @@
         <router-link to="/LatestArrivals" class="hidden md:block text-gray-400 px-4">Latest Arrival
         </router-link>
         <router-link to="/AllTshirt" class="hidden md:block text-gray-400 px-4">all T-shirt</router-link>
-        <router-link to="/CreateSkipa" class="hidden md:block text-gray-400 px-4">Create your own Skipa
+        <router-link to="/RequestTshirt" class="hidden md:block text-gray-400 px-4">Create your own Skipa
         </router-link>
       </div>
 
